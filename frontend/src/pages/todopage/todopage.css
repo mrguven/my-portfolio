@@ -1,0 +1,149 @@
+#todoContainer {
+  min-height: 500px;
+
+  display: grid;
+  grid-template-columns: 15% 40% 35%;
+  grid-template-rows: 100px 50px 5% auto;
+  grid-template-areas:
+    "toDoTitle toDoTitle toDoTitle"
+    "todoInput todoInput todoButton"
+    "inputErrorMsg inputErrorMsg inputErrorMsg "
+    " todoAds  mainList  doneList";
+  column-gap: 1%;
+  row-gap: 1%;
+  margin-bottom: 30px;
+  padding: 1%;
+}
+
+#toDoList {
+  display: grid;
+  grid-template-columns: 80% 10% 10%;
+  grid-template-rows: auto;
+  grid-template-areas: "task1 Ok delete";
+  border-bottom: 1px blue double;
+  margin-right: 15%;
+}
+
+#errorMsg {
+  grid-area: inputErrorMsg;
+  padding-left: 60%;
+  color: red;
+  font-size: 1.3vw;
+  animation: fadeIn 4s;
+  font-weight: bolder;
+  align-self: center;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#todoAds {
+  grid-area: todoAds;
+}
+.taskList {
+  grid-area: task1;
+  padding-right: 4%;
+  margin-right: 5%;
+}
+
+#toDoTitle {
+  grid-area: toDoTitle;
+  align-self: center;
+  justify-self: center;
+  font-size: 4vw;
+  font-family: "MV Boli", Times, serif;
+  color: #c85000;
+  font-weight: bolder;
+  text-shadow: 0 0 3px white, 0 0 5px #0000ff;
+}
+
+#todoDone {
+  display: grid;
+  grid-template-columns: 80% 10% 10%;
+  grid-template-rows: auto;
+  grid-template-areas: "donetaskList delete delete";
+  border-bottom: 1px blue double;
+}
+
+.donetaskList {
+  grid-area: donetaskList;
+  padding-right: 4%;
+}
+
+#todoButton {
+  grid-area: todoButton;
+  width: 30%;
+  border: none;
+  border-radius: 30px;
+  background-color: #356bff;
+  color: white;
+  margin-left: 10%;
+  font-size: 3vw;
+  align-self: center;
+}
+#todoButton:hover {
+  background-color: #baadd8;
+  color: #111;
+  cursor: pointer;
+  box-shadow: 0 0 10px #054080;
+}
+#todoInput {
+  grid-area: todoInput;
+  border-radius: 30px;
+  width: 40%;
+  justify-self: end;
+  border: #537ff7 1px;
+  border-style: inset;
+  padding-left: 2%;
+}
+#todoInput:focus {
+  border-color: #356bff;
+  box-shadow: 0 0 10px #054080;
+  outline: none;
+}
+#mainList {
+  grid-area: mainList;
+}
+#doneList {
+  grid-area: doneList;
+}
+
+.OkImg {
+  grid-area: Ok;
+  cursor: pointer;
+  align-self: center;
+}
+
+.deleteImg {
+  grid-area: delete;
+  cursor: pointer;
+  align-self: center;
+}
+
+.sublist {
+  background-color: #fff;
+  list-style-type: none;
+}
+
+.taskh2 {
+  text-align: left;
+  font-size: 2vw;
+  color: #356bff;
+  font-family: "MV Boli", Times, serif;
+}
+.img {
+  max-width: 50%;
+  height: 30px;
+  margin-top: 20px;
+  font-style: oblique;
+}
+
+.taskTitle {
+  color: rgb(120, 122, 231);
+  font-family: "Ink Free", Times, serif;
+  text-shadow: 0 0 3px #ff0000, 0 0 5px rgb(197, 195, 218);
+}
