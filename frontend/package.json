@@ -9,7 +9,22 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "axios": "^1.6.8",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/roboto": "^5.0.8",
+    "@googlemaps/js-api-loader": "^1.16.2",
+    "@googlemaps/react-wrapper": "^1.1.35",
+    "@mui/icons-material": "^5.15.5",
+    "@mui/material": "^5.15.5",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.12",
+    "@react-google-maps/api": "^2.19.2",
+    "react-geocode": "^1.0.0-alpha.1",
+    "react-google-autocomplete": "^2.7.3",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.12.0",
+    "react-router-dom": "^6.16.0"
   },
   "scripts": {
     "start": "react-scripts start",
