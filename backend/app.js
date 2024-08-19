@@ -1,7 +1,7 @@
 const express = require('express');
-const rout=require('./routes/route')
-const app = express();
 require('dotenv').config();
+const routes=require('./routes/routes')
+const app = express();
 const createError = require('http-errors');
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -15,7 +15,7 @@ app.use(cors({
   "optionsSuccessStatus": 204
   }))
 
-app.use(rout)
+app.use(routes)
 const port=process.env.PORT
 
 // view engine setup

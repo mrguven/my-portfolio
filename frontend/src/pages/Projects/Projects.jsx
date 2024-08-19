@@ -1,4 +1,4 @@
-import "./portfolio.css";
+import "./Projects.css";
 import music from "./music.png";
 import checlist from "./checklist.jpg";
 import catchMe from "./catchme.jpg";
@@ -17,65 +17,6 @@ import Autocomplete from "@mui/material/Autocomplete";
 export default function Portfolio() {
   return (
     <div id="infoContainer">
-      <div id="profil">
-        <Stack spacing={2} sx={{ width: 300 }}>
-          <Autocomplete
-            freeSolo
-            id="free-solo-2-demo"
-            disableClearable
-            options={top100Films.map((option) => option.title)}
-            renderInput={(params) => (
-              <TextField
-                {...params}
-                label="Search input"
-                InputProps={{
-                  ...params.InputProps,
-                  type: "search",
-                }}
-              />
-            )}
-          />
-        </Stack>
-      </div>
-
-      <div className="classSubinfo" id="subInfo">
-        <div id="textPart">
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1-content"
-              id="panel1-header"
-            >
-              <p>
-                <b>Ik ben communicatief, sociaal, gedreven..... </b> <br />
-                <i>Read More...</i>
-              </p>
-            </AccordionSummary>
-            <AccordionDetails>
-              Ik werk aan deze projecten: <br />
-              -Taxi reservering programma <br />
-              - Music playList <br />
-              - To do App <br />
-              - Catch me Game <br />
-              Ik ben communicatief, sociaal, gedreven, geordend, analytisch,
-              oplossingsgericht, professioneel en resultaatgericht zijn
-              kwaliteiten die mij omschrijven.sdfdsfdsfdsf,fghdfh.
-              Ik ben een toegewijde medewerker
-              met ervaring in het helpen van organisaties om bedrijfsdoelen te
-              behalen en te overtreffen.
-              <br /> <br />
-              Ik heb een passie voor ICT en ik leer snel. Ik heb een oog voor
-              detail waarbij ik ICT-knelpunten tijdig identificeer. Dit doe ik
-              op een vrolijke en gestructureerde manier zonder aandacht te
-              verliezen voor de organisatiedoelstellingen.
-              <br /> <br />
-              Ik heb een oog voor detail waarbij ik ICT-knelpunten tijdig
-              identificeer. Dit doe ik op een vrolijke en gestructureerde manier
-              zonder aandacht te verliezen voor de organisatiedoelstellingen.
-            </AccordionDetails>
-          </Accordion>
-        </div>
-      </div>
       <div className="classSubinfo" id="subInfo-2">
         <div id="linkedinLink">
           {" "}
@@ -98,11 +39,10 @@ export default function Portfolio() {
         </div>
       </div>
       <div className="classSubinfo" id="subInfo-3">
-        subInfo-3
       </div>
       <div id="port">
         <Link className="portLinks" to="/">
-          Portfolie
+          Home
         </Link>
         <Link className="portLinks" to="/mytaxi">
           MyTaxi{" "}

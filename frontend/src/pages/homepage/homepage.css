@@ -1,32 +1,12 @@
 #mainContainerHome {
-  background-image: url(./back.png);
-  background-repeat: no-repeat;
+  background-image: url(./background1.jpeg);
   background-size: cover;
   background-attachment: fixed;
-  height: 1000px;
-}
-
-#test {
-  font-size: 100px;
-}
-
-#profilePicture {
-  width: 30%;
-  border-radius: 50%;
-  height: 350px;
-  margin-left: 20%;
-}
-
-/* @keyframes slidetext {
-    from{padding: 0px;opacity: 0;}to{padding: 100px;opacity: 1;}
-} */
-#text1 {
-  top: 0;
-  font-size: xx-large;
-  color: aliceblue;
-  font-style: oblique;
-  /* animation: slidetext ;
-animation-duration:2s;
-animation-timing-function: ease-in;
-animation-fill-mode: forwards; */
+  height: 700px;
+ }
+#text1{
+  color: black;
+  font-weight: bolder;
+  -webkit-text-stroke: 1px white;
+  font-size: 1.5vw;
 }

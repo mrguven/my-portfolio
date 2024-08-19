@@ -64,7 +64,7 @@ export default function SignUp() {
       if (firstName && lastName && password && email) {
         console.log(firstName, "afterpost");
         axios
-          .post("http://localhost:8080/createuser", {
+          .post("http://localhost:7777/createuser", {
             firstName,
             lastName,
             password,

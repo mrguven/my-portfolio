@@ -1,9 +1,8 @@
 #infoContainer {
     display: grid;
     grid-template-columns: 20% auto auto;
-    grid-template-rows: 35% auto auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-      "port profil subInfo"
       "port subInfo-2 subInfo-3"
       "port myTaxi todo"
       "port music catchMe";  
@@ -276,9 +275,8 @@
     #infoContainer {
       display: grid;
       grid-template-columns: 30% 80%;
-      grid-template-rows: auto auto auto auto;
+      grid-template-rows: auto auto auto;
       grid-template-areas:
-        "port profil "
         "port subInfo"
         "port  subInfo-2 "
         "port  subInfo-3"

@@ -7,7 +7,7 @@ import MyTaxi from "./pages/MyTaxi";
 import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
 import MyPlayList from "./pages/playlist/MyPlayList";
-import Portfolio from "./pages/portfolio/Portfolio";
+import Projects from "./pages/Projects/Projects";
 import Home from "./pages/homepage/Home";
 import SignIn from "./pages/signIn/SignIn";
 import SignUp from "./pages/signup/SignUp";
@@ -19,7 +19,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/signup" element={<SignUp />}></Route>
           <Route path="/catchMe" element={<CatchMe />} />
           <Route path="/myplaylist" element={<MyPlayList />} />

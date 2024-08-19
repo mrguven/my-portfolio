@@ -26,7 +26,7 @@ export default function NavBar() {
           </Link>
         </li>
         <li>
-          <Link to="/portfolio">Portfolio</Link>
+          <Link to="/projects">Projects</Link>
         </li>
         <li>
           <Link to="/mytaxi">MyTaxi</Link>

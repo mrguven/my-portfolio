@@ -110,7 +110,7 @@ export default function Todo() {
         id="todoInput"
         onKeyDown={handleKeyDown}
         autoFocus
-        placeholder="your tasks"
+        placeholder="enter your task..."
         onChange={(e) => {
           setTodo(e.target.value);
           setErrorMsg("");
