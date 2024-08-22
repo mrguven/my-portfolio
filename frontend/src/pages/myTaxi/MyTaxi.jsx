@@ -1,9 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import React from "react";
 import { Loader } from "@googlemaps/js-api-loader";
-import { usePlacesWidget } from "react-google-autocomplete";
-import usePlacesService from "react-google-autocomplete/lib/usePlacesAutocompleteService";
-import { Autocomplete } from "@react-google-maps/api";
+import "./myTaxi.css"
 const center = {
   lat: 51.9244,
   lng: 4.4777,

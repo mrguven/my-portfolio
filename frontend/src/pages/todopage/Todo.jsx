@@ -101,9 +101,6 @@ export default function Todo() {
   return (
     <div id="todoContainer">
       <h1 id="toDoTitle">ToDo List</h1>
-
-      <h3>Do not forget what will you do</h3>
-
       <input
         type="text"
         name="todoList"

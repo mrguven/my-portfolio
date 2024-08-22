@@ -26,6 +26,9 @@ export default function NavBar() {
           </Link>
         </li>
         <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
           <Link to="/projects">Projects</Link>
         </li>
         <li>
@@ -63,7 +66,7 @@ export default function NavBar() {
               <MenuItem onClick={handleClose}>
               <Link  className="active" to='/'> Home</Link></MenuItem>
               <MenuItem onClick={handleClose}>
-                <Link  className="active" to='portfolio'> My account</Link>
+                <Link  className="active" to='projects'> My Projects</Link>
                </MenuItem>
               <MenuItem onClick={handleClose}>
                 <Link className="active" to="/signup">
