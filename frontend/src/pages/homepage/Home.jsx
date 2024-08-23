@@ -1,7 +1,8 @@
 import axios from "axios";
 import "./homepage.css";
 import { useRef, useState, useEffect } from "react";
-
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 export default function Home() {
   const ref = useRef(null);
   const [data, setData] = useState(null);
@@ -74,7 +75,7 @@ window.onload = function() {
   return (
     <div id="mainContainerHome">
       <div id="profileDiv">
-      <p className=""> Hello,</p>
+      <h1 className="display-1"> Hello,</h1>
       </div>
       <div>
         <p>I`m</p>
@@ -82,6 +83,13 @@ window.onload = function() {
       <div>
         <p>Rauf Guven</p>
       </div>
+      <div>
+        <LinkedInIcon sx={{ fontSize: 80,color:"blue"}}/>
+      </div>
+      <div>
+        <GitHubIcon sx={{ fontSize: 80,color:"blue"}}/>
+      </div>
+      
       <div>
       <h1>
   <a href="" className="typewrite" data-period="2000" data-type='[ "Hi, Im Si.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>

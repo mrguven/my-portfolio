@@ -32,6 +32,9 @@ export default function NavBar() {
           <Link to="/projects">Projects</Link>
         </li>
         <li>
+          <Link to="/contact">Contact</Link>
+        </li>
+        <li>
           <Link to="/mytaxi">MyTaxi</Link>
         </li>
         <li>
