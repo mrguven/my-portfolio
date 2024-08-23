@@ -1,12 +1,27 @@
-#mainContainerHome {
+
+ #mainContainerHome::before{
+  content: "";
   background-image: url(./background1.jpeg);
-  background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 700px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: .3;  
+  background-size: cover;
+ }#mainContainerHome{
+  height: 600px;
  }
 #text1{
-  color: black;
+  color: rgb(22, 31, 46);
   font-weight: bolder;
-  -webkit-text-stroke: 1px white;
-  font-size: 1.5vw;
+  -webkit-text-stroke: 1px rgb(194, 192, 192);
+  font-size: 1.7vw;
+}
+
+.typewrite{
+  text-decoration: none;
 }

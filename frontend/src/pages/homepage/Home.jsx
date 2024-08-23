@@ -1,53 +1,104 @@
-import  axios  from "axios";
+import axios from "axios";
 import "./homepage.css";
-import { useRef,useState,useEffect } from "react";
-
+import { useRef, useState, useEffect } from "react";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 export default function Home() {
   const ref = useRef(null);
-  const [data,setData]=useState(null);
+  const [data, setData] = useState(null);
   useEffect(() => {
     axios.get("http://localhost:7777/").then((res) => {
-        setData(res.data);
-        console.log(res.data);
+      setData(res.data);
+      console.log(res.data);
     });
   }, []);
+
+  let TxtType = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function() {
+    let i = this.loopNum % this.toRotate.length;
+    let fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+    let that = this;
+    let delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+    }
+
+    setTimeout(function() {
+    that.tick();
+    }, delta);
+};
+
+window.onload = function() {
+    let elements = document.getElementsByClassName('typewrite');
+    for (let i=0; i<elements.length; i++) {
+        let toRotate = elements[i].getAttribute('data-type');
+        let period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
+        }
+    }
+    // INJECT CSS
+    let css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+    document.body.appendChild(css);
+};
+
+
+
   return (
     <div id="mainContainerHome">
       <div id="profileDiv">
-        <p  ref={ref}></p>
+      <h1 className="display-1"> Hello,</h1>
       </div>
-      <div id="text1"> 
-          
-            
-              <p>
-                <b>Ik ben communicatief, sociaal, gedreven..... </b> <br />
-                <i>Read More...</i>
-              </p>
-           
-              Ik werk aan deze projecten: <br />
-              -Taxi reservering programma <br />
-              - Music playList <br />
-              - To do App <br />
-              - Catch me Game <br />
-              Ik ben communicatief, sociaal, gedreven, geordend, analytisch,
-              oplossingsgericht, professioneel en resultaatgericht zijn
-              kwaliteiten die mij omschrijven.sdfdsfdsfdsf,fghdfh.
-              Ik ben een toegewijde medewerker
-              met ervaring in het helpen van organisaties om bedrijfsdoelen te
-              behalen en te overtreffen.
-              <br /> <br />
-              Ik heb een passie voor ICT en ik leer snel. Ik heb een oog voor
-              detail waarbij ik ICT-knelpunten tijdig identificeer. Dit doe ik
-              op een vrolijke en gestructureerde manier zonder aandacht te
-              verliezen voor de organisatiedoelstellingen.
-              <br /> <br />
-              Ik heb een oog voor detail waarbij ik ICT-knelpunten tijdig
-              identificeer. Dit doe ik op een vrolijke en gestructureerde manier
-              zonder aandacht te verliezen voor de organisatiedoelstellingen.
-            </div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div>
+        <p>I`m</p>
+      </div>
+      <div>
+        <p>Rauf Guven</p>
+      </div>
+      <div>
+        <LinkedInIcon sx={{ fontSize: 80,color:"blue"}}/>
+      </div>
+      <div>
+        <GitHubIcon sx={{ fontSize: 80,color:"blue"}}/>
+      </div>
+      
+      <div>
+      <h1>
+  <a href="" className="typewrite" data-period="2000" data-type='[ "Hi, Im Si.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
+    <span className="wrap"></span>
+  </a>
+</h1>
+      </div>
+      
+      
     </div>
   );
 }

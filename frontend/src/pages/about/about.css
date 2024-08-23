@@ -1,0 +1,21 @@
+#mainContainerHome::before{
+    content: "";
+    background-image: url(./background1.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .3;
+    height: 800px;
+    background-size: cover;
+   }
+  #text1{
+    color: rgb(22, 31, 46);
+    font-weight: bolder;
+    -webkit-text-stroke: 1px rgb(194, 192, 192);
+    font-size: 1.7vw;
+  }

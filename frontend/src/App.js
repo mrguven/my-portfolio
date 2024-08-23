@@ -3,8 +3,9 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import CatchMe from "./pages/CatchMe";
 import Todo from "./pages/todopage/Todo";
-import MyTaxi from "./pages/MyTaxi";
+import MyTaxi from "./pages/myTaxi/MyTaxi";
 import Footer from "./components/Footer";
+import About from "./pages/about/About";
 import Contact from "./pages/Contact";
 import MyPlayList from "./pages/playlist/MyPlayList";
 import Projects from "./pages/Projects/Projects";
@@ -27,6 +28,7 @@ function App() {
           <Route path="/mytaxi" element={<MyTaxi />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/signin" element={<SignIn />}></Route>
+          <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
       </BrowserRouter>
