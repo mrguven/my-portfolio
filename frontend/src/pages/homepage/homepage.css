@@ -18,10 +18,30 @@
 #text1{
   color: rgb(22, 31, 46);
   font-weight: bolder;
-  -webkit-text-stroke: 1px rgb(194, 192, 192);
-  font-size: 1.7vw;
+  -webkit-text-stroke: 1px rgb(175, 22, 22);
+  font-size: 3.7rem;
 }
-
+.downloadLink{
+  color: white;
+}
 .typewrite{
   text-decoration: none;
 }
+#first-letter{
+color: blue;
+font-size: 5.7rem;
+}
+#second-letter{
+  color: rgb(104, 104, 148);
+  font-size: 5.7rem;
+}
+#third-letter{
+  color: rgb(127, 127, 167);
+  font-size: 5.7rem;
+}
+#fourth-letter{
+  color: rgb(98, 98, 109);
+  font-size: 5.7rem;
+}
+
+          
