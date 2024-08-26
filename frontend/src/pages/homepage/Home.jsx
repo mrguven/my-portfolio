@@ -91,7 +91,7 @@ export default function Home() {
     <div id="mainContainerHome">
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
-          <Grid xs={12} className="text-end">
+          <Grid xs={10} className="text-end">
             <div>
               <span>
               <Button   href="https://www.linkedin.com/in/rauf-guven-a76791a6/"
@@ -110,20 +110,19 @@ export default function Home() {
             </div>
           </Grid>
           <Grid xs={12}>
-            <div id="profileDiv">
-              <h1 className="fs-1" style={changeColorStyle}>
-                {" "}
-                Hello,
+            <div className="m-10">
+              <h1 className="hello-word" style={changeColorStyle}>
+                HI,
               </h1>
             </div>
           </Grid>
-          <Grid xs={4}>
+          <Grid xs={3}>
             <div className="text-end">
               <p className="fs-1">I`m</p>
             </div>
           </Grid>
           <Grid xs={4}>
-            <div>
+            <div className="letters">
               <span id="first-letter">R</span>
               <span id="second-letter">A</span>
               <span id="third-letter">U</span>
@@ -132,7 +131,7 @@ export default function Home() {
           </Grid>
 
           <Grid xs={8}>
-            <div>
+            <div className="text-center">
               <h1>
                 <a
                   href=""
@@ -145,7 +144,7 @@ export default function Home() {
               </h1>
             </div>
           </Grid>
-          <Grid xs={8}>
+          <Grid xs={12} className="text-center">
             <Button variant="contained" endIcon={<FileDownloadIcon />}>
               <Link
                 className="downloadLink"
