@@ -77,15 +77,31 @@ export default function Home() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid black}";
     document.body.appendChild(css);
   };
-  let colorR = 175;
-  let colorG = 88;
-  let colorB = 122;
-  let color = `rgb(${colorR}, ${colorG}, ${colorB})`;
-  let changeColorStyle = {
-    color: `${color}`,
-  };
-  console.log(color);
-  console.log(colorB);
+
+ 
+//change font color
+const injectStyle = (style) => {
+  const styleElement = document.createElement('style');
+  let styleSheet = null;
+
+  document.head.appendChild(styleElement);
+
+  styleSheet = styleElement.sheet;
+
+  styleSheet.insertRule(style, styleSheet.cssRules.length);
+};
+let  keyframesAnimation= `@keyframes animation1 {
+  0% {color: blue;}
+  25%{color: rgb(89, 106, 138);}
+  50%{color: rgb(109, 1, 138);}
+  75%{color:brown;}
+  100% {color: red;}
+}`
+injectStyle(keyframesAnimation);
+let changeColorStyle = {
+  animation: `animation1 5s infinite`,
+  
+};
 
   return (
     <div id="mainContainerHome">
@@ -94,23 +110,25 @@ export default function Home() {
           <Grid xs={10} className="text-end">
             <div>
               <span>
-              <Button   href="https://www.linkedin.com/in/rauf-guven-a76791a6/"
-            target="https://www.linkedin.com/in/rauf-guven-a76791a6/">
-  <LinkedInIcon sx={{ fontSize: 50, color: 'blue'}} />
-</Button>
-                
+                <Button
+                  href="https://www.linkedin.com/in/rauf-guven-a76791a6/"
+                  target="https://www.linkedin.com/in/rauf-guven-a76791a6/"
+                >
+                  <LinkedInIcon sx={{ fontSize: 50, color: "blue" }} />
+                </Button>
               </span>
               <span>
-              <Button  href="https://github.com/mrguven"
-            target="https://github.com/mrguven">
-  <GitHubIcon sx={{ fontSize: 50, color: 'black' }}/>
-</Button>
-                
+                <Button
+                  href="https://github.com/mrguven"
+                  target="https://github.com/mrguven"
+                >
+                  <GitHubIcon sx={{ fontSize: 50, color: "black" }} />
+                </Button>
               </span>
             </div>
           </Grid>
           <Grid xs={12}>
-            <div className="m-10">
+            <div className="m-12">
               <h1 className="hello-word" style={changeColorStyle}>
                 HI,
               </h1>
@@ -123,7 +141,7 @@ export default function Home() {
           </Grid>
           <Grid xs={4}>
             <div className="letters">
-              <span id="first-letter">R</span>
+              <span style={changeColorStyle} id="first-letter">R</span>
               <span id="second-letter">A</span>
               <span id="third-letter">U</span>
               <span id="fourth-letter">F</span>

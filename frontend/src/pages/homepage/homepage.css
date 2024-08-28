@@ -4,23 +4,15 @@
   background-image: url(./background1.jpeg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  position: absolute;
   z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   opacity: .3;  
-  background-size: cover;
- }#mainContainerHome{
+  height: 700px;
+  background-repeat: repeat;
+ }
+ #mainContainerHome{
+  font-weight: bolder;
   height: 600px;
  }
-#text1{
-  color: rgb(22, 31, 46);
-  font-weight: bolder;
-  -webkit-text-stroke: 1px rgb(175, 22, 22);
-  font-size: 3.7rem;
-}
 .downloadLink{
   color: white;
 }
@@ -44,10 +36,10 @@ font-size: 7.7rem;
   font-size: 7.7rem;
 }
 .hello-word{
-  margin-left: 10%;
+  margin-left: 14%;
   font-size: 3rem;
   font-family: Brush Script ;
-}
+ }
 .letters{
   font-family: Brush Script ;
 }

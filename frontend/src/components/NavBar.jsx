@@ -53,13 +53,13 @@ export default function NavBar() {
                 "aria-labelledby": "project-button",
               }}
             >
-              <MenuItem  onClick={handleClose}>
+              <MenuItem  onClick={handleClose1}>
               <Link className="active" to="/myplaylist">MyPlay</Link>
               </MenuItem>
-              <MenuItem onClick={handleClose}>
+              <MenuItem onClick={handleClose1}>
                 <Link className="active" to="/todo">Todo</Link>
                </MenuItem>
-              <MenuItem onClick={handleClose}>
+              <MenuItem onClick={handleClose1}>
               <Link className="active" to="/catchMe">CatchMe</Link>
               </MenuItem>
             </Menu>
