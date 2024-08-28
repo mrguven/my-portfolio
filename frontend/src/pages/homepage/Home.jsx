@@ -74,7 +74,7 @@ export default function Home() {
     // INJECT CSS
     let css = document.createElement("style");
     css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid black}";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid blue}";
     document.body.appendChild(css);
   };
 
@@ -92,21 +92,23 @@ const injectStyle = (style) => {
 };
 let  keyframesAnimation= `@keyframes animation1 {
   0% {color: blue;}
-  25%{color: rgb(89, 106, 138);}
-  50%{color: rgb(109, 1, 138);}
+  25%{color: yellow;}
+  40%{color: rgb(109, 133, 38);}
+  50%{color: rgb(159, 141, 78);}
+  60%{color: rgb(109, 51, 58);}
   75%{color:brown;}
-  100% {color: red;}
+  100% {color: blue;}
 }`
 injectStyle(keyframesAnimation);
 let changeColorStyle = {
-  animation: `animation1 5s infinite`,
+  animation: `animation1 9s infinite`,
   
 };
 
   return (
     <div id="mainContainerHome">
       <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={2}>
+        <Grid container >
           <Grid xs={10} className="text-end">
             <div>
               <span>
@@ -162,7 +164,7 @@ let changeColorStyle = {
               </h1>
             </div>
           </Grid>
-          <Grid xs={12} className="text-center">
+          <Grid xs={12} sx={{marginTop:10}} className="text-center">
             <Button variant="contained" endIcon={<FileDownloadIcon />}>
               <Link
                 className="downloadLink"
