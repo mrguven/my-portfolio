@@ -4,24 +4,41 @@
   background-image: url(./background1.jpeg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  position: absolute;
   z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   opacity: .3;  
-  background-size: cover;
- }#mainContainerHome{
+  height: 750px;
+ }
+ #mainContainerHome{
+  font-weight: bolder;
   height: 600px;
  }
-#text1{
-  color: rgb(22, 31, 46);
-  font-weight: bolder;
-  -webkit-text-stroke: 1px rgb(194, 192, 192);
-  font-size: 1.7vw;
+.downloadLink{
+  color: white;
 }
-
 .typewrite{
   text-decoration: none;
+}
+#first-letter{
+color: blue;
+font-size: 7.7rem;
+}
+#second-letter{
+  color: rgb(104, 104, 148);
+  font-size: 7.7rem;
+}
+#third-letter{
+  color: rgb(127, 127, 167);
+  font-size: 7.7rem;
+}
+#fourth-letter{
+  color: rgb(98, 98, 109);
+  font-size: 7.7rem;
+}
+.hello-word{
+  margin-left: 14%;
+  font-size: 3rem;
+  font-family: Brush Script ;
+ }
+.letters{
+  font-family: Brush Script ;
 }

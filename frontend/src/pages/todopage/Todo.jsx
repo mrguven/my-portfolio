@@ -26,9 +26,7 @@ export default function Todo() {
         setErrorMsg("");
       }, 4000);
     }
-
     setTodo("");
-
     taskInput.current.focus();
   };
 
@@ -45,9 +43,7 @@ export default function Todo() {
           setErrorMsg("");
         }, 4000);
       }
-
       setTodo("");
-
       taskInput.current.focus();
     }
   };
@@ -93,7 +89,6 @@ export default function Todo() {
       if (list) {
         setDoneListFromLocal(list);
       }
-
       setTODoDone(doneListFromLocal);
     }
   }, []);
@@ -119,7 +114,6 @@ export default function Todo() {
       <button id="todoButton" onClick={addToList}>
         +
       </button>
-
       <div id="todoAds"></div>
       <div id="mainList">
         <h2 className="taskTitle">WE ARE WAITING YOU</h2>
@@ -128,7 +122,6 @@ export default function Todo() {
             return (
               <div id="toDoList" key={index}>
                 <div className="taskList">
-                  {" "}
                   <ul className="sublist">
                     <li className="titleL2">
                       <h2 className="taskh2"> {task} </h2>{" "}
@@ -136,7 +129,6 @@ export default function Todo() {
                   </ul>
                 </div>
                 <div className="OkImg">
-                  {" "}
                   <img
                     className="img"
                     src={ok}
@@ -144,10 +136,9 @@ export default function Todo() {
                     onClick={() => {
                       taskSucceed(index);
                     }}
-                  />{" "}
+                  />
                 </div>
                 <div className="deleteImg">
-                  {" "}
                   <img
                     className="img"
                     src={cross}
@@ -155,13 +146,12 @@ export default function Todo() {
                     onClick={() => {
                       taskDelete(index);
                     }}
-                  />{" "}
+                  />
                 </div>
               </div>
             );
           })}
       </div>
-
       <div id="doneList">
         <h2 className="taskTitle">THANKS, WE ARE DONE</h2>
         {todoDone &&
@@ -176,9 +166,7 @@ export default function Todo() {
                     </li>
                   </ul>
                 </div>
-
                 <div className="deleteImg">
-                  {" "}
                   <img
                     className="img"
                     src={cross}
@@ -186,7 +174,7 @@ export default function Todo() {
                     onClick={() => {
                       DonetaskDelete(index);
                     }}
-                  />{" "}
+                  />
                 </div>
               </div>
             );

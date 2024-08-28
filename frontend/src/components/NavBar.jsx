@@ -6,7 +6,6 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useState } from "react";
-
 export default function NavBar() {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -15,6 +14,15 @@ export default function NavBar() {
   };
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const [anchorEl1, setAnchorEl1] = useState(null);
+  const open1 = Boolean(anchorEl1);
+  const handleClick1 = (event) => {
+    setAnchorEl1(event.currentTarget);
+  };
+  const handleClose1 = () => {
+    setAnchorEl1(null);
   };
 
   return (
@@ -29,22 +37,39 @@ export default function NavBar() {
           <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/projects">Projects</Link>
+        <div>
+              <Link id="project-button"
+              aria-controls={open1 ? "project-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open1 ? "true" : undefined}
+              onClick={handleClick1}>Projects</Link>
+           
+            <Menu
+              id="project-menu"
+              anchorEl={anchorEl1}
+              open={open1}
+              onClose={handleClose1}
+              MenuListProps={{
+                "aria-labelledby": "project-button",
+              }}
+            >
+              <MenuItem  onClick={handleClose1}>
+              <Link className="active" to="/myplaylist">MyPlay</Link>
+              </MenuItem>
+              <MenuItem onClick={handleClose1}>
+                <Link className="active" to="/todo">Todo</Link>
+               </MenuItem>
+              <MenuItem onClick={handleClose1}>
+              <Link className="active" to="/catchMe">CatchMe</Link>
+              </MenuItem>
+              <MenuItem onClick={handleClose1}>
+              <Link className="active" to="/mytaxi">MyBinek</Link>
+              </MenuItem>
+            </Menu>
+          </div>
         </li>
         <li>
           <Link to="/contact">Contact</Link>
-        </li>
-        <li>
-          <Link to="/mytaxi">MyTaxi</Link>
-        </li>
-        <li>
-          <Link to="/myplaylist">MyPlay</Link>
-        </li>
-        <li>
-          <Link to="/todo">Todo</Link>
-        </li>
-        <li>
-          <Link to="/catchMe">CatchMe</Link>
         </li>
         <li>
           <div>

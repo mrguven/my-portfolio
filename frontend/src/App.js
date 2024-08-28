@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import NavBar from "./components/NavBar";
 import CatchMe from "./pages/CatchMe";
