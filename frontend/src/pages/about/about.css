@@ -1,6 +1,6 @@
-#mainContainerHome::before{
+#mainContainerAbout::before{
     content: "";
-    background-image: url(./background1.jpeg);
+    background-image: url(./background5.jpeg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: absolute;
@@ -9,15 +9,26 @@
     bottom: 0;
     left: 0;
     right: 0;
-    opacity: .3;
+    opacity: .6;
     background-size: cover;
-    height: 700px;
+    height: 120%;
    }
-  
- 
-#text1{
+   #mainContainerAbout{
+    font-weight: bolder;
+   }
+
+#text-gen{
   color: rgb(22, 31, 46);
-  font-weight: bolder;
   -webkit-text-stroke: .5px rgb(219, 200, 200);
   font-size: 1.2rem;
+}
+#text-1{
+margin-left: 4%;
+}
+#text-2{
+  margin-left: 18%;
+}
+
+#text-4{
+  margin-left: 18%;
 }

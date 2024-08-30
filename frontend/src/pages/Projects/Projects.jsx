@@ -19,17 +19,14 @@ export default function Portfolio() {
     <div id="infoContainer">
       <div className="classSubinfo" id="subInfo-2">
         <div id="linkedinLink">
-          {" "}
           <a
             href="https://www.linkedin.com/in/rauf-guven-a76791a6/"
             target="https://www.linkedin.com/in/rauf-guven-a76791a6/"
           >
-            {" "}
             <img src={linkedin} id="linkedId" alt="linkedin" />
           </a>
         </div>
         <div id="githubLink">
-          {" "}
           <a
             href="https://github.com/mrguven"
             target="https://github.com/mrguven"
@@ -45,10 +42,10 @@ export default function Portfolio() {
           Home
         </Link>
         <Link className="portLinks" to="/mytaxi">
-          MyTaxi{" "}
+          MyTaxi
         </Link>
         <Link className="portLinks" to="/todo">
-          TodoApp{" "}
+          TodoApp
         </Link>
         <Link className="portLinks" to="/catchMe">
           CatchMe
@@ -88,7 +85,7 @@ export default function Portfolio() {
         <h3 id="catchMeText">
           dat is een web game. Je moet binnen enkele seconden op item klikken.
           Na elke klik heb je een punt. Als je op item niet klikt,ben je de
-          speel verloren.{" "}
+          speel verloren.
         </h3>
       </div>
     </div>

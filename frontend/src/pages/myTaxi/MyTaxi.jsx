@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import React from "react";
 import { Loader } from "@googlemaps/js-api-loader";
-import "./myTaxi.css"
+import "./myTaxi.css";
 const center = {
   lat: 51.9244,
   lng: 4.4777,
@@ -143,14 +143,13 @@ export default function MyTaxi() {
             Make reservation easly..
             <br />
             You can select date and destinations... <br />
-          </i>{" "}
+          </i>
         </b>
       </div>
       <div id="extraInfo">
         <h3>
-          {" "}
           <i>Do not hesitate to contact us</i> <br />
-          <i>if you need to help</i>{" "}
+          <i>if you need to help</i>
         </h3>
       </div>
 
@@ -178,7 +177,7 @@ export default function MyTaxi() {
         </div>
         <div id="arriving-Label">
           <label htmlFor="arriving" className="reservationLabel">
-            Arriving:{" "}
+            Arriving:
           </label>
         </div>
 
@@ -195,7 +194,7 @@ export default function MyTaxi() {
         </div>
         <div id="reservation-Date-Label">
           <label htmlFor="date" className="reservationLabel">
-            {" "}
+            
             Date:
           </label>
         </div>
@@ -224,8 +223,8 @@ export default function MyTaxi() {
       <div id="resultBox">
         {total > 0 && (
           <h2 id="result" ref={result}>
-            {" "}
-            total : {total} euro{" "}
+            
+            total : {total} euro
           </h2>
         )}
       </div>
