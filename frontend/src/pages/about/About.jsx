@@ -8,38 +8,44 @@ import angular from "./angular.jpeg";
 import aboutCode from "./aboutCode.jpeg";
 import js from "./js.jpeg";
 import nodeJs from "./nodeJs.jpeg";
+import meNoBackground from "./meNoBackground.png";
 
 export default function About() {
   return (
     <div className="d-flex flex-column" id="mainContainerAbout">
       <div className="d-flex flex-column m-3 mt-5">
-        <div className="d-flex mb-3 flex-column justify-content-center" id="profileDiv">
-          <div className="d-flex flex-column" id="text-gen">
-            <div className="col-6 text-center p-2" id="text-1">
+        <div className="d-flex mb-3 flex-column justify-content-center">
+          <div className="d-flex mb-3 flex-row">
+            <div className="d-flex flex-column col-5" id="text-gen">
+              <div className="text-center" id="text-1">
                 Ik ben communicatief, sociaal, gedreven, geordend, analytisch,
                 oplossingsgericht, professioneel en resultaatgericht zijn
-                kwaliteiten die mij omschrijven. Ik ben een
-                toegewijde medewerker met ervaring in het helpen van
-                organisaties om bedrijfsdoelen te behalen en te overtreffen.
-                          </div>
-            <div className="col-6 text-center p-2" id="text-2">
-              Ik heb een passie voor ICT en ik leer snel. Ik heb een oog voor
-              detail waarbij ik ICT-knelpunten tijdig identificeer. Dit doe ik
-              op een vrolijke en gestructureerde manier zonder aandacht te
-              verliezen voor de organisatiedoelstellingen.
+                kwaliteiten die mij omschrijven. Ik ben een toegewijde
+                medewerker met ervaring in het helpen van organisaties om
+                bedrijfsdoelen te behalen en te overtreffen.
+              </div>
+              <div className="text-center p-2" id="text-2">
+                Ik heb een passie voor ICT en ik leer snel. Ik heb een oog voor
+                detail waarbij ik ICT-knelpunten tijdig identificeer. Dit doe ik
+                op een vrolijke en gestructureerde manier zonder aandacht te
+                verliezen voor de organisatiedoelstellingen.
+              </div>
+              <div className="text-center p-2" id="text-3">
+                Ik heb een oog voor detail waarbij ik ICT-knelpunten tijdig
+                identificeer. Dit doe ik op een vrolijke en gestructureerde
+                manier zonder aandacht te verliezen voor de
+                organisatiedoelstellingen.
+              </div>
+              <div className="text-center p-2" id="text-4">
+                Ik werk aan deze projecten: -Taxi reservering programma - Music
+                playList - To do App - Catch me Game
+              </div>
             </div>
-            <div className="col-6 text-center p-2" id="text-3">
-              Ik heb een oog voor detail waarbij ik ICT-knelpunten tijdig
-              identificeer. Dit doe ik op een vrolijke en gestructureerde manier
-              zonder aandacht te verliezen voor de organisatiedoelstellingen.
-            </div>
-            <div className="col-6 text-center p-2" id="text-4">
-              Ik werk aan deze projecten: -Taxi reservering programma - Music
-              playList - To do App - Catch me Game
+            <div className="col-5 p-1" id="profile-image">
+              <img className="col-12" src={meNoBackground} alt="" />
             </div>
           </div>
-        </div>
-        <div className="d-flex flex-column mb-3 justify-content-center">
+          <div className="d-flex flex-column mb-3 justify-content-center">
           <div className="p-1 align-self-center">
             <Button variant="contained" endIcon={<FileDownloadIcon />}>
               <Link
@@ -53,6 +59,8 @@ export default function About() {
             </Button>
           </div>
         </div>
+        </div>
+      
         {/* <div className="d-flex flex-column mb-3 justify-content-center" id="casousel-part">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">

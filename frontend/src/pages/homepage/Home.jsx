@@ -8,6 +8,8 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { Button } from "@mui/material";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Unstable_Grid2";
+import profilPic from "./me2.png" 
+import zIndex from "@mui/material/styles/zIndex";
 
 export default function Home() {
   const ref = useRef(null);
@@ -83,32 +85,27 @@ export default function Home() {
 const injectStyle = (style) => {
   const styleElement = document.createElement('style');
   let styleSheet = null;
-
   document.head.appendChild(styleElement);
-
   styleSheet = styleElement.sheet;
-
   styleSheet.insertRule(style, styleSheet.cssRules.length);
 };
 let  keyframesAnimation= `@keyframes animation1 {
   0% {color: blue;}
   25%{color: yellow;}
-  40%{color: rgb(109, 133, 38);}
-  50%{color: rgb(159, 141, 78);}
-  60%{color: rgb(109, 51, 58);}
+  25%{color: red;}
   75%{color:brown;}
   100% {color: blue;}
 }`
 injectStyle(keyframesAnimation);
 let changeColorStyle = {
-  animation: `animation1 9s infinite`,
-  
-};
+  animation: `animation1 10s infinite`,
+  };
 
   return (
     <div id="mainContainerHome">
       <Box sx={{ flexGrow: 1 }}>
         <Grid container >
+          <Grid xs={6}>
           <Grid xs={10} className="text-end">
             <div>
               <span>
@@ -129,7 +126,7 @@ let changeColorStyle = {
               </span>
             </div>
           </Grid>
-          <Grid xs={12}>
+          <Grid xs={4}>
             <div className="m-12">
               <h1 className="hello-word" style={changeColorStyle}>
                 HI,
@@ -175,6 +172,14 @@ let changeColorStyle = {
                 Download CV
               </Link>
             </Button>
+          </Grid>
+          </Grid>
+          <Grid xs={6}>
+          <Grid xs={7} sx={{zIndex:-3}}>
+            <div>
+              <img src={profilPic} alt="" />
+            </div>
+          </Grid>
           </Grid>
         </Grid>
       </Box>
