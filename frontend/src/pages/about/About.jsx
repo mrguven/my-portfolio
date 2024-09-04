@@ -45,7 +45,7 @@ export default function About() {
               <img className="col-12" src={meNoBackground} alt="" />
             </div>
           </div>
-          <div className="d-flex flex-column mb-3 justify-content-center">
+          {/* <div className="d-flex flex-column mb-3 justify-content-center">
           <div className="p-1 align-self-center">
             <Button variant="contained" endIcon={<FileDownloadIcon />}>
               <Link
@@ -58,7 +58,7 @@ export default function About() {
               </Link>
             </Button>
           </div>
-        </div>
+        </div> */}
         <div className="d-flex flex-column m-5 justify-content-center align-self-center" id="casousel-part">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">

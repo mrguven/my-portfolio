@@ -6,7 +6,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Link } from "react-router-dom";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { Button } from "@mui/material";
-import profilPic from "./me2.png" 
+import profilPic from "./me2.png";
 import zIndex from "@mui/material/styles/zIndex";
 import Footer from "../../components/Footer";
 
@@ -79,88 +79,81 @@ export default function Home() {
     document.body.appendChild(css);
   };
 
- 
-//change font color
-const injectStyle = (style) => {
-  const styleElement = document.createElement('style');
-  let styleSheet = null;
-  document.head.appendChild(styleElement);
-  styleSheet = styleElement.sheet;
-  styleSheet.insertRule(style, styleSheet.cssRules.length);
-};
-let  keyframesAnimation= `@keyframes animation1 {
+  //change font color
+  const injectStyle = (style) => {
+    const styleElement = document.createElement("style");
+    let styleSheet = null;
+    document.head.appendChild(styleElement);
+    styleSheet = styleElement.sheet;
+    styleSheet.insertRule(style, styleSheet.cssRules.length);
+  };
+  let keyframesAnimation = `@keyframes animation1 {
   0% {color: blue;}
   25%{color: yellow;}
   25%{color: red;}
   75%{color:brown;}
   100% {color: blue;}
-}`
-injectStyle(keyframesAnimation);
-let changeColorStyle = {
-  animation: `animation1 10s infinite`,
+}`;
+  injectStyle(keyframesAnimation);
+  let changeColorStyle = {
+    animation: `animation1 10s infinite`,
   };
 
   return (
-    <div className="d-flex flex-row" id="mainContainerHome">
-      <div className="d-flex flex-row" sx={{ flexGrow: 1 }} id='box' >
-        
-          <div xs={8}>
-          <div xs={10} className="text-end">
-            <div>
-              <span>
-                <Button
-                  href="https://www.linkedin.com/in/rauf-guven-a76791a6/"
-                  target="https://www.linkedin.com/in/rauf-guven-a76791a6/"
-                >
-                  <LinkedInIcon sx={{ fontSize: 50, color: "blue" }} />
-                </Button>
-              </span>
-              <span>
-                <Button
-                  href="https://github.com/mrguven"
-                  target="https://github.com/mrguven"
-                >
-                  <GitHubIcon sx={{ fontSize: 50, color: "black" }} />
-                </Button>
-              </span>
-            </div>
+    <div className="d-flex flex-column" id="mainContainerHome">
+      <div className="d-flex flex-column" id="box">
+        <div className="d-flex flex-column">
+          <div className="d-flex flex-row justify-content-end">
+            <span>
+              <Button
+                href="https://www.linkedin.com/in/rauf-guven-a76791a6/"
+                target="https://www.linkedin.com/in/rauf-guven-a76791a6/"
+              >
+                <LinkedInIcon sx={{ fontSize: 50, color: "blue" }} />
+              </Button>
+            </span>
+            <span>
+              <Button
+                href="https://github.com/mrguven"
+                target="https://github.com/mrguven"
+              >
+                <GitHubIcon sx={{ fontSize: 50, color: "black" }} />
+              </Button>
+            </span>
           </div>
-          <div xs={4}>
-            <div className="ps-5">
-              <h1 className="hello-word" style={changeColorStyle}>
-                HI,
-              </h1>
-            </div>
+          <div className="d-flex flex-row justify-content-start">
+            <h1 className="hello-word" style={changeColorStyle}>
+              HI,
+            </h1>
           </div>
-          <div xs={3}>
-            
-          </div>
-          <div xs={4}>
-            <div className="d-flex flex-row" id="letters">
-              <div className="d-flex flex-column  align-item-start">
-                <div className="align-self-start" style={changeColorStyle} id="letter-I">I</div>
-              
+          <div className="d-flex flex-row" id="letters">
+            <div className="d-flex">
+              <div
+                className="align-self-start"
+                style={changeColorStyle}
+                id="letter-I"
+              >
+                I
               </div>
-              <div className="d-flex flex-column">
-                <div className="d-flex flex-column mt-3">
-                
-              <p className="fs-1">`m</p>
-            
-                </div>
-                <div className="d-flex flex-row ms-5 justify-content-center">
-                <span style={changeColorStyle} id="first-letter">R</span>
-              <span id="second-letter">A</span>
-              <span id="third-letter">U</span>
-              <span id="fourth-letter">F</span>
-                </div>
+            </div>
+            <div className="d-flex flex-column mt-5">
+              <div className="d-flex flex-column mt-5">
+                <p className="fs-1" style={changeColorStyle}>
+                  `m
+                </p>
               </div>
-            
-              
+              <div className="d-flex flex-row ms-5 justify-content-center">
+                <span style={changeColorStyle} id="first-letter">
+                  R
+                </span>
+                <span id="second-letter">A</span>
+                <span id="third-letter">U</span>
+                <span id="fourth-letter">F</span>
+              </div>
             </div>
           </div>
-
-          <div xs={8}>
-            <div className="text-center">
+          <div className="d-flex flex-row justify-content-start ps-5">
+            <div className="text-center ps-5">
               <h1>
                 <a
                   href=""
@@ -173,7 +166,7 @@ let changeColorStyle = {
               </h1>
             </div>
           </div>
-          <div xs={12} sx={{marginTop:10}} className="text-center">
+          <div className="d-flex flex-row  justify-content-center">
             <Button variant="contained" endIcon={<FileDownloadIcon />}>
               <Link
                 className="downloadLink"
@@ -185,15 +178,7 @@ let changeColorStyle = {
               </Link>
             </Button>
           </div>
-          </div>
-          {/* <div xs={4}>
-          <div xs={4} sx={{zIndex:-3}}>
-            <div id="profil-pic">
-              <img id="profil-image" src={profilPic} alt="" />
-            </div>
-          </div>
-          </div> */}
-        
+        </div>
       </div>
       <Footer />
     </div>

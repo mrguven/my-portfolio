@@ -115,15 +115,15 @@
 #footer {
   background-color: rgb(108, 2, 206);
   display: grid;
-  margin-top: 4%;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas: "subFooter subFooter1 subFooter2 subFooter3";
   grid-area: footer;
+  margin-top: 2%;
   max-width: 100%;
   position: relative;
   bottom: 0;
   width: 100%;
-  height: 2.5rem; 
+  height: 4.5rem; 
   padding-bottom: 4%;
 }
 
