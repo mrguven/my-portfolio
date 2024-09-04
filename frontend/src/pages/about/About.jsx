@@ -1,14 +1,14 @@
-import { Button } from "@mui/material";
+import { Button, Icon } from "@mui/material";
 import "./about.css";
 import { Link } from "react-router-dom";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
-import react from "./react.jpeg";
-import nodeJs1 from "./nodeJs1.jpeg";
-import angular from "./angular.jpeg";
-import aboutCode from "./aboutCode.jpeg";
-import js from "./js.jpeg";
-import nodeJs from "./nodeJs.jpeg";
+import react from "./react.png";
+import angular from "./angular.png";
+import nodeJs from "./node.png";
 import meNoBackground from "./meNoBackground.png";
+import JavascriptIcon from '@mui/icons-material/Javascript';
+import HtmlIcon from '@mui/icons-material/Html';
+import Footer from "../../components/Footer";
 
 export default function About() {
   return (
@@ -59,39 +59,32 @@ export default function About() {
             </Button>
           </div>
         </div>
-        </div>
-      
-        {/* <div className="d-flex flex-column mb-3 justify-content-center" id="casousel-part">
+        <div className="d-flex flex-column m-5 justify-content-center align-self-center" id="casousel-part">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src={react} class="d-block w-100" alt="..." />
+      <img src={react} class="d-block" alt="..." />
     </div>
     <div class="carousel-item">
-      <img src={angular} class="d-block w-100" alt="..." />
+      <img src={angular} class="d-block" alt="..." />
     </div>
     <div class="carousel-item">
-      <img src={nodeJs} class="d-block w-100" alt="..." />
+      <img src={nodeJs} class="d-block" alt="..." />
     </div>
     <div class="carousel-item">
-      <img src={js} class="d-block w-100" alt="..." />
+      <JavascriptIcon class="d-block"></JavascriptIcon>
     </div>
     <div class="carousel-item">
-      <img src={aboutCode} class="d-block w-100" alt="..." />
+      <HtmlIcon class="d-block"></HtmlIcon>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
-        </div> */}
+        </div>
+        </div>
+      
+        
       </div>
-      <div></div>
+      <Footer />
     </div>
   );
 }

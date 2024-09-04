@@ -12,11 +12,9 @@
   right: 0;
   opacity: .5;
   background-size: cover;
-  height: 1000px;
  }
  #mainContainerHome{
   font-weight: bolder;
-  height: 600px;
  }
 .downloadLink{
   color: white;
@@ -45,6 +43,25 @@ font-size: 7.7rem;
   font-size: 3rem;
   font-family: Brush Script ;
  }
-.letters{
+#letters{
   font-family: Brush Script ;
+  padding-left: 24%
 }
+#box::before{
+  content: "";
+  background-image: url(./me2.png);
+  position: absolute;
+  z-index: -2;
+  top: 20%;
+  bottom: 0;
+  left: 40%;
+  right: 0;
+background-size:70%;
+background-repeat: no-repeat;
+background-position: center;
+ }
+ #letter-I{
+font-size: 15rem;
+position: relative;
+top: 0%;
+ }

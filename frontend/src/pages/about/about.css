@@ -11,7 +11,7 @@
     right: 0;
     opacity: .6;
     background-size: cover;
-    height: 150%;
+    height: 180%;
    }
    #mainContainerAbout{
     font-weight: bolder;
@@ -39,4 +39,12 @@
 #text-4{
   margin-left: 15%;
   width: 130%;
+}
+#casousel-part{
+  width: 50%;
+  height: 150px;
+}
+.d-block{
+  height: 250px;
+  padding-left: 30%;
 }
