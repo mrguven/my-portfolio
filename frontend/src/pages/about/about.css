@@ -11,7 +11,7 @@
     right: 0;
     opacity: .6;
     background-size: cover;
-    height: 170%;
+    height: 190%;
    }
    #mainContainerAbout{
     font-weight: bolder;
@@ -23,6 +23,7 @@
   color: rgb(22, 31, 46);
   -webkit-text-stroke: .5px rgb(219, 200, 200);
   font-size: 1.2rem;
+  padding-top: 5%;
 }
 #text-1{
   width: 130%;
@@ -39,11 +40,16 @@
   margin-left: 15%;
   width: 130%;
 }
-#casousel-part{
-  width: 50%;
-  height: 150px;
-}
 .d-block{
   height: 250px;
-  padding-left: 30%;
+  width: 300px;
+  margin: 0 5% 0 5% ;
+}
+.carousel-inner{
+  width: 300px;
+}
+.carosel-text{
+  color: black;
+  -webkit-text-stroke: .3px rgb(219, 200, 200);
+  font-size: 1.2rem;
 }
