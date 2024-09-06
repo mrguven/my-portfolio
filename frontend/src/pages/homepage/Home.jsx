@@ -122,12 +122,6 @@ export default function Home() {
           
           <div className="d-flex flex-row" id="letters">
             <div className="d-flex flex-column">
-            <div className="p-1">
-            <h1 className="hello-word" style={changeColorStyle}>
-              HI,
-            </h1>
-          </div>
-              
                 <div className="p-1 justify-content-end" style={changeColorStyle} id="letter-I">I</div>
              
             </div>
