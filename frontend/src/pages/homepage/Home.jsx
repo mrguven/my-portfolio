@@ -6,8 +6,6 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Link } from "react-router-dom";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { Button } from "@mui/material";
-import profilPic from "./me2.png";
-import zIndex from "@mui/material/styles/zIndex";
 import Footer from "../../components/Footer";
 
 export default function Home() {
@@ -121,28 +119,25 @@ export default function Home() {
               </Button>
             </span>
           </div>
-          <div className="d-flex flex-row justify-content-start">
+          
+          <div className="d-flex flex-row" id="letters">
+            <div className="d-flex flex-column">
+            <div className="p-1">
             <h1 className="hello-word" style={changeColorStyle}>
               HI,
             </h1>
           </div>
-          <div className="d-flex flex-row" id="letters">
-            <div className="d-flex">
-              <div
-                className="align-self-start"
-                style={changeColorStyle}
-                id="letter-I"
-              >
-                I
-              </div>
+              
+                <div className="p-1 justify-content-end" style={changeColorStyle} id="letter-I">I</div>
+             
             </div>
-            <div className="d-flex flex-column mt-5">
-              <div className="d-flex flex-column mt-5">
+            <div className="d-flex flex-column justify-content-end">
+              <div className="p-1">
                 <p className="fs-1" style={changeColorStyle}>
                   `m
                 </p>
               </div>
-              <div className="d-flex flex-row ms-5 justify-content-center">
+              <div className="p-2 ms-5">
                 <span style={changeColorStyle} id="first-letter">
                   R
                 </span>
@@ -159,7 +154,7 @@ export default function Home() {
                   href=""
                   className="typewrite"
                   data-period="2000"
-                  data-type='[ "I am Creative.", "I Love Design.", "I Love to Develop." ]'
+                  data-type='[ "I am Creative...", "I Love Design...", "I Love to Develop..." ]'
                 >
                   <span className="wrap"></span>
                 </a>

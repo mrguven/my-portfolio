@@ -53,6 +53,9 @@ export default function NavBar() {
                 "aria-labelledby": "project-button",
               }}
             >
+              <MenuItem onClick={handleClose1}>
+              <Link className="active" to="/mytaxi">MyBinek</Link>
+              </MenuItem>
               <MenuItem  onClick={handleClose1}>
               <Link className="active" to="/myplaylist">MyPlay</Link>
               </MenuItem>
@@ -61,10 +64,7 @@ export default function NavBar() {
                </MenuItem>
               <MenuItem onClick={handleClose1}>
               <Link className="active" to="/catchMe">CatchMe</Link>
-              </MenuItem>
-              <MenuItem onClick={handleClose1}>
-              <Link className="active" to="/mytaxi">MyBinek</Link>
-              </MenuItem>
+              </MenuItem>              
             </Menu>
           </div>
         </li>

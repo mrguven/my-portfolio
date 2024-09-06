@@ -72,13 +72,13 @@ export default function About() {
               >
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src={react} class="d-block" alt="..." />
+                    <img src={react} class="d-block" alt="react" />
                   </div>
                   <div class="carousel-item">
-                    <img src={angular} class="d-block" alt="..." />
+                    <img src={angular} class="d-block" alt="angular" />
                   </div>
                   <div class="carousel-item">
-                    <img src={nodeJs} class="d-block" alt="..." />
+                    <img src={nodeJs} class="d-block" alt="nodeJs..." />
                   </div>
                   <div class="carousel-item">
                     <JavascriptIcon class="d-block"></JavascriptIcon>
@@ -139,25 +139,25 @@ export default function About() {
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src={frontEnd} class="d-block" alt="..." />
+                    <img src={frontEnd} class="d-block" alt="frontEnd..." />
                     <div class="carousel-caption d-none d-md-block">
                       <p className="carosel-text">Front-End Develoment</p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src={backEnd} class="d-block" alt="..." />
+                    <img src={backEnd} class="d-block" alt="backEnd..." />
                     <div class="carousel-caption d-none d-md-block">
                       <p className="carosel-text">Back-End Development.</p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src={mobile} class="d-block" alt="..." />
+                    <img src={mobile} class="d-block" alt="mobile..." />
                     <div class="carousel-caption d-none d-md-block">
                       <p className="carosel-text">Mobile Development.</p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src={coding} class="d-block" alt="..." />
+                    <img src={coding} class="d-block" alt="coding..." />
                     <div class="carousel-caption d-none d-md-block"></div>
                   </div>
                 </div>
