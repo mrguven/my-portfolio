@@ -11,12 +11,12 @@ import Footer from "../../components/Footer";
 export default function Home() {
   const ref = useRef(null);
   const [data, setData] = useState(null);
-  useEffect(() => {
-    axios.get("http://localhost:7777/").then((res) => {
-      setData(res.data);
-      console.log(res.data);
-    });
-  }, []);
+  // useEffect(() => {
+  //   axios.get("http://localhost:7777/").then((res) => {
+  //     setData(res.data);
+  //     console.log(res.data);
+  //   });
+  // }, []);
 
   let TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;

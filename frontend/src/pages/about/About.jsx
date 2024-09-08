@@ -49,7 +49,7 @@ export default function About() {
               <img className="col-12" src={meNoBackground} alt="" />
             </div>
           </div>
-          <div className="d-flex flex-column mb-3 justify-content-center">
+          <div className="d-flex flex-column mb-5 pb-5 justify-content-center border-bottom border-primary border-4 w-100">
             <div className="p-1 align-self-center">
               <Button variant="contained" endIcon={<FileDownloadIcon />}>
                 <Link
@@ -61,6 +61,69 @@ export default function About() {
                   Download CV
                 </Link>
               </Button>
+            </div>
+          </div>
+          <div className="d-flex flex-column mb-3 pb-3 justify-content-center w-100">
+            <div className="p-1 align-self-center">
+             ERVARING
+            </div>
+          </div>
+          <div className="d-flex flex-row mb-3 justify-content-evenly">
+            <div className="d-flex flex-column mb-3 me-4 w-50 align-items-end">
+              <div className="exper d-flex align-items-center justify-content-center mb-4 w-75 ">
+                <p className="align-items-center">
+                <p className="position-explanation">STAGE</p>    <i>CERME ICT BV</i>
+                </p>
+              </div>
+              <div className="exper d-flex align-items-center justify-content-center mb-4 w-75">
+                <p>
+                 <p className="position-explanation">LERAAR ONDERSTEUNER</p><i>BASISSCHOOL WERELDWIJS</i> 
+                </p>
+              </div>
+              <div className="exper d-flex align-items-center justify-content-center mb-4 w-75">
+                <p>
+                <p className="position-explanation">GASTHEER</p>    <i>LOGEERHUIS DE BUREN</i>
+                </p>
+              </div>
+              <div className="exper d-flex align-items-center justify-content-center mb-4 w-75">
+                <p>
+                <p className="position-explanation">BEGELEIDER</p>   <i>UNIE VAN VRIJWILLIGERS ROTTERDAM</i>
+                </p>
+              </div>
+              <div className="exper d-flex align-items-center justify-content-center mb-4 w-75">
+                <p>
+                <p className="position-explanation">DIRECTEUR</p>    <i>BMZ ZUIVELBOERDERIJ</i>
+                </p>
+              </div>
+              <div className="exper d-flex align-items-center justify-content-center mb-4 w-75">
+                <p>
+                <p className="position-explanation">ONDERZOEKER</p>    <i>GAZI UNIVERSITY</i>
+                </p>
+              </div>
+            </div>
+
+            <div className="d-flex flex-row mb-3">
+              <div id="vl"></div>
+            </div>
+            <div className="d-flex flex-column mb-3 ms-4 w-50 align-items-start">
+              <div className="exper d-flex align-items-center justify-content-center mb-4 w-50">
+                <p>FEB. 2024 - Heden</p>
+              </div>
+              <div className="exper d-flex align-items-center justify-content-center mb-4 w-50">
+                <p>2022 - FEB. 2024</p>
+              </div>
+              <div className="exper d-flex align-items-center justify-content-center mb-4 w-50">
+                <p>DEC. 2021 - 2022</p>
+              </div>
+              <div className="exper d-flex align-items-center justify-content-center mb-4 w-50">
+                <p>JUN. 2021 - OKT. 2021</p>
+              </div>
+              <div className="exper d-flex align-items-center justify-content-center mb-4 w-50">
+                <p>2017 - 2019</p>
+              </div>
+              <div className="exper d-flex align-items-center justify-content-center mb-4 w-50">
+                <p>JUL. 2012 - SEP. 2016</p>
+              </div>
             </div>
           </div>
           <div className="d-flex flex-row justify-content-center align-self-center border-top border-primary border-4 w-100">
@@ -187,9 +250,6 @@ export default function About() {
                 </button>
               </div>
             </div>
-          </div>
-          <div className="d-flex flex-column mb-3 justify-content-center">
-    
           </div>
         </div>
       </div>
