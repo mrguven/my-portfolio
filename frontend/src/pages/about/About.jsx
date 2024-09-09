@@ -64,8 +64,8 @@ export default function About() {
             </div>
           </div>
           <div className="d-flex flex-column mb-3 pb-3 justify-content-center w-100">
-            <div className="p-1 align-self-center">
-             ERVARING
+            <div className="title-experience p-1 align-self-center">
+            <p className="title-experience p-1 align-self-center font-italic font-weight-bold">ERVARING</p> 
             </div>
           </div>
           <div className="d-flex flex-row mb-3 justify-content-evenly">
@@ -107,22 +107,22 @@ export default function About() {
             </div>
             <div className="d-flex flex-column mb-3 ms-4 w-50 align-items-start">
               <div className="exper d-flex align-items-center justify-content-center mb-4 w-50">
-                <p>FEB. 2024 - Heden</p>
+                <p>FEB / 2024 - Heden</p>
               </div>
               <div className="exper d-flex align-items-center justify-content-center mb-4 w-50">
-                <p>2022 - FEB. 2024</p>
+                <p>2022 - FEB / 2024</p>
               </div>
               <div className="exper d-flex align-items-center justify-content-center mb-4 w-50">
-                <p>DEC. 2021 - 2022</p>
+                <p>DEC / 2021 - 2022</p>
               </div>
               <div className="exper d-flex align-items-center justify-content-center mb-4 w-50">
-                <p>JUN. 2021 - OKT. 2021</p>
+                <p>JUN / 2021 - OKT 2021</p>
               </div>
               <div className="exper d-flex align-items-center justify-content-center mb-4 w-50">
                 <p>2017 - 2019</p>
               </div>
               <div className="exper d-flex align-items-center justify-content-center mb-4 w-50">
-                <p>JUL. 2012 - SEP. 2016</p>
+                <p>JUL / 2012 - SEP / 2016</p>
               </div>
             </div>
           </div>
