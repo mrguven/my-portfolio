@@ -6,35 +6,10 @@ import taxi from "./taxi.png";
 import github from "./gtihub for web.png";
 import linkedin from "./linkedin.png";
 import { Link } from "react-router-dom";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import TextField from "@mui/material/TextField";
-import Stack from "@mui/material/Stack";
-import Autocomplete from "@mui/material/Autocomplete";
 
 export default function Portfolio() {
   return (
     <div id="infoContainer">
-      <div className="classSubinfo" id="subInfo-2">
-        <div id="linkedinLink">
-          <a
-            href="https://www.linkedin.com/in/rauf-guven-a76791a6/"
-            target="https://www.linkedin.com/in/rauf-guven-a76791a6/"
-          >
-            <img src={linkedin} id="linkedId" alt="linkedin" />
-          </a>
-        </div>
-        <div id="githubLink">
-          <a
-            href="https://github.com/mrguven"
-            target="https://github.com/mrguven"
-          >
-            <img src={github} id="githubId" alt="github" />
-          </a>
-        </div>
-      </div>
       <div className="classSubinfo" id="subInfo-3">
       </div>
       <div id="port">

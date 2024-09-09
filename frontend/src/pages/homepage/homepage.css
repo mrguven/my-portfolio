@@ -12,6 +12,7 @@
   right: 0;
   opacity: .5;
   background-size: cover;
+  height: 700px;
  }
  #mainContainerHome{
   font-weight: bolder;
@@ -45,7 +46,7 @@ font-size: 7.7rem;
  }
 #letters{
   font-family: Brush Script ;
-  padding-left: 24%
+  padding-left: 20%
 }
 #box::before{
   content: "";
@@ -61,7 +62,6 @@ background-repeat: no-repeat;
 background-position: center;
  }
  #letter-I{
-font-size: 15rem;
-position: relative;
-top: 0%;
+font-size: 21vw;
+margin-bottom: 10px;
  }

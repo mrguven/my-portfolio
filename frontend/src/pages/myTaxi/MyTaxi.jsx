@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import React from "react";
 import { Loader } from "@googlemaps/js-api-loader";
+import MyBinek from"./taxi-sign.jpg"
 import "./myTaxi.css";
 const center = {
   lat: 51.9244,

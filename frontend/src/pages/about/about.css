@@ -1,50 +1,79 @@
-#mainContainerAbout::before{
-    content: "";
-    background-image: url(./background5.jpeg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: absolute;
-    z-index: -4;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: .6;
-    background-size: cover;
-    height: 180%;
-   }
-   #mainContainerAbout{
-    font-weight: bolder;
-    height: 800px;
-   }
-#profile-image{
+#mainContainerAbout::before {
+  content: "";
+  background-image: url(./background5.jpeg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: absolute;
+  z-index: -4;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.6;
+  background-size: cover;
+  height: 2100px;
+}
+#mainContainerAbout {
+  font-weight: bolder;
+}
+#profile-image {
   z-index: -2;
 }
-#text-gen{
+#text-gen {
   color: rgb(22, 31, 46);
-  -webkit-text-stroke: .5px rgb(219, 200, 200);
+  -webkit-text-stroke: 0.5px rgb(219, 200, 200);
   font-size: 1.2rem;
+  padding-top: 5%;
 }
-#text-1{
+#text-1 {
   width: 130%;
 }
-#text-2{
+#text-2 {
   margin-left: 5%;
   width: 130%;
 }
-#text-3{
+#text-3 {
   margin-left: 10%;
   width: 130%;
 }
-#text-4{
+#text-4 {
   margin-left: 15%;
   width: 130%;
 }
-#casousel-part{
-  width: 50%;
-  height: 150px;
-}
-.d-block{
+.d-block {
   height: 250px;
-  padding-left: 30%;
+  width: 300px;
+  margin: 0 5% 0 5%;
+}
+.carousel-inner {
+  width: 300px;
+}
+.carosel-text {
+  color: black;
+  -webkit-text-stroke: 0.3px rgb(219, 200, 200);
+  font-size: 1.2rem;
+}
+#vl {
+  border-left: 6px solid gray;
+  justify-self: center;
+  z-index: -2;
+}
+.exper {
+  text-align: center !important;
+  height: 90px;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.position-explanation {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin: 0;
+  font-size: 1.4vw;
+}
+.title-experience {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 2.9vw;
+  color: gray;
+  text-shadow: 1px 1px 2px white, 0 0 1em gray, 0 0 0.2em gray;
 }
