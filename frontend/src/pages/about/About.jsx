@@ -65,43 +65,50 @@ export default function About() {
           </div>
           <div className="d-flex flex-column mb-3 pb-3 justify-content-center w-100">
             <div className="title-experience p-1 align-self-center">
-            <p className="title-experience p-1 align-self-center font-italic font-weight-bold">ERVARING</p> 
+              <p className="title-experience p-1 align-self-center font-italic font-weight-bold">
+                ERVARING
+              </p>
             </div>
           </div>
           <div className="d-flex flex-row mb-3 justify-content-evenly">
             <div className="d-flex flex-column mb-3 me-4 w-50 align-items-end">
               <div className="exper d-flex align-items-center justify-content-center mb-4 w-75 ">
                 <p className="align-items-center">
-                <p className="position-explanation">STAGE</p>    <i>CERME ICT BV</i>
+                  <p className="position-explanation">STAGE</p>{" "}
+                  <i>CERME ICT BV</i>
                 </p>
               </div>
               <div className="exper d-flex align-items-center justify-content-center mb-4 w-75">
                 <p>
-                 <p className="position-explanation">LERAAR ONDERSTEUNER</p><i>BASISSCHOOL WERELDWIJS</i> 
+                  <p className="position-explanation">LERAAR ONDERSTEUNER</p>
+                  <i>BASISSCHOOL WERELDWIJS</i>
                 </p>
               </div>
               <div className="exper d-flex align-items-center justify-content-center mb-4 w-75">
                 <p>
-                <p className="position-explanation">GASTHEER</p>    <i>LOGEERHUIS DE BUREN</i>
+                  <p className="position-explanation">GASTHEER</p>{" "}
+                  <i>LOGEERHUIS DE BUREN</i>
                 </p>
               </div>
               <div className="exper d-flex align-items-center justify-content-center mb-4 w-75">
                 <p>
-                <p className="position-explanation">BEGELEIDER</p>   <i>UNIE VAN VRIJWILLIGERS ROTTERDAM</i>
+                  <p className="position-explanation">BEGELEIDER</p>{" "}
+                  <i>UNIE VAN VRIJWILLIGERS ROTTERDAM</i>
                 </p>
               </div>
               <div className="exper d-flex align-items-center justify-content-center mb-4 w-75">
                 <p>
-                <p className="position-explanation">DIRECTEUR</p>    <i>BMZ ZUIVELBOERDERIJ</i>
+                  <p className="position-explanation">DIRECTEUR</p>{" "}
+                  <i>BMZ ZUIVELBOERDERIJ</i>
                 </p>
               </div>
               <div className="exper d-flex align-items-center justify-content-center mb-4 w-75">
                 <p>
-                <p className="position-explanation">ONDERZOEKER</p>    <i>GAZI UNIVERSITY</i>
+                  <p className="position-explanation">ONDERZOEKER</p>{" "}
+                  <i>GAZI UNIVERSITY</i>
                 </p>
               </div>
             </div>
-
             <div className="d-flex flex-row mb-3">
               <div id="vl"></div>
             </div>
