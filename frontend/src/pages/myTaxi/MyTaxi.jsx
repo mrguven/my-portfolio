@@ -1,12 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import React from "react";
 import { Loader } from "@googlemaps/js-api-loader";
-import MyBinek from"./taxi-sign.jpg"
+import Footer from "../../components/Footer";
+import MyBinek from "./taxi-sign.jpg";
 import "./myTaxi.css";
-const center = {
-  lat: 51.9244,
-  lng: 4.4777,
-};
 
 const GOOGLE_MAP_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
 
@@ -17,16 +14,38 @@ export default function MyTaxi() {
   const [distance, setDistance] = useState(Number);
   const [travelTime, setTravelTime] = useState(Number);
   const [search, setSearch] = useState();
-  const [directionsResponse, setDirectionsResponse] = useState(null);
-  const [loadMap, setLoadMap] = useState();
+  const [gotDistance, setGotDistance] = useState(false);
   const [total, setTotal] = useState(Number);
   const result = useRef();
   const googleMapRef = useRef(null);
-  const [map, setMap] = useState(null);
-  const [departureOptions, setDepartureOptions] = useState();
-  const [arrivingOptions, setArrivingOptions] = useState();
 
-  const savePlaceDetailsToState = () => {};
+  function PriceReserveButton() {
+    if (gotDistance === false) {
+      return (
+        <div className="p-1" id="reservation-Button">
+          <button
+            type="submit"
+            onClick={seePrice}
+            className="submitButtons"
+          >
+            See Price
+          </button>
+        </div>
+      );
+    } else if (gotDistance === true) {
+      return (
+        <div className="p-1" id="reservation-Button">
+          <button
+            type="submit"
+            onClick={makeReservation}
+            className="submitButtons"
+          >
+            Request MyBinek
+          </button>
+        </div>
+      );
+    }
+  }
 
   let newmap;
 
@@ -58,9 +77,9 @@ export default function MyTaxi() {
     };
   }, []);
 
-  const makeReservation = async (event) => {
+  const seePrice = async (event) => {
     event.preventDefault();
-
+    setGotDistance(true);
     const loader = new Loader({
       apiKey: GOOGLE_MAP_API_KEY,
       version: "weekly",
@@ -77,10 +96,8 @@ export default function MyTaxi() {
         zoom: 10,
       });
     });
-
     let directionsService = new window.google.maps.DirectionsService();
     let directionsRenderer = new window.google.maps.DirectionsRenderer();
-
     let request = {
       origin: departure,
       destination: arriving,
@@ -94,10 +111,12 @@ export default function MyTaxi() {
         setSearch(response);
       }
     });
-
     googleMapRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const makeReservation=(asd)=>{
+    setGotDistance(false)
+  }
   //  const {
   //   placesService,
   //   placePredictions,
@@ -121,116 +140,114 @@ export default function MyTaxi() {
   useEffect(() => {
     setDistance(search?.routes[0]?.legs[0]?.distance.value / 1000);
     setTravelTime(search?.routes[0]?.legs[0]?.duration.value / 60);
-    setTotal((distance * 3 + travelTime * 0.4).toFixed(2));
+    // setTotal((distance * 3 + travelTime * 0.4).toFixed(2));
+    setTotal(123);
   });
 
   return (
-    <div id="mainContainer">
-      <div id="header">
-        <h1 id="head">MayTax</h1>
+    <div className="d-flex flex-column">
+      <div className="d-flex flex-row m-5 justify-content-evenly">
+        <div className="d-flex flex-row"></div>
+        <div className="d-flex flex-column">
+          <div className="p-1">
+            <div id="taxiInfoPart">
+              <p>
+                <b>
+                  Select date and destinations... <br /> Go anywhere with
+                  yourBinek
+                </b>
+              </p>
+            </div>
+          </div>
+          <div className="p-1">
+            <p>
+              <b>
+                <i>
+                  Your vehicle is always ready for you... <br />
+                </i>
+              </b>
+            </p>
+          </div>
+          <div className="p-1">
+            <form action="/makeReservation" method="post" id="reservationInfo">
+              <div className="d-flex flex-column mb-3">
+                <div className="p-1 m-1" id="departure-Input">
+                  <input
+                    type="text"
+                    name="departure"
+                    required
+                    value={departure}
+                    onChange={(event) => {
+                      setDeparture(event.target.value);
+                    }}
+                    className="reservationInput ps-3"
+                    id="departure"
+                    placeholder="Location"
+                  />
+                </div>
 
-        <h1 className="subHead">MayTax</h1>
-
-        <h3>We Zijn Altijd Klaar...</h3>
-
-        <h3>Altijd Bereikbaar</h3>
-
-        <h3>7/24 Dienst</h3>
+                <div className="p-1 m-1" id="arriving-Input">
+                  <input
+                    type="text"
+                    name="arriving"
+                    value={arriving}
+                    onChange={(event) => setArriving(event.target.value)}
+                    className="reservationInput ps-3"
+                    required
+                    placeholder="Destination"
+                  />
+                </div>
+                <div
+                  className="p-1 m-1 d-flex flex-row"
+                  id="reservation-Date-Input"
+                >
+                  <input
+                    type="datetime-local"
+                    name="time"
+                    className="reservationInput ps-3"
+                    value={time}
+                    onChange={(event) => setTime(event.target.value)}
+                    required
+                  />
+                  <span
+                    className="ps-3 text-primary align-self-center"
+                    id="reserv-explanation"
+                  >
+                    ?
+                  </span>
+                </div>
+                {/* <div className="p-1 ps-3 align-self-center">
+                  <span id="explanation-text">
+                    if you want to make a reservation, select a date
+                  </span>
+                </div> */}
+                <div className="p-1" id="reservation-Button">
+                  <PriceReserveButton />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div className="p-1 col-4" id="resultBox">
+          {total > 0 && (
+            <h2 id="result" ref={result}>
+              total : {total} €
+            </h2>
+          )}
+        </div>
+        <div className="p-1" id="mapsStyle" ref={googleMapRef} />
       </div>
-
-      <div id="taxiInfoPart">
-        <b>
-          <i>
-            Make reservation easly..
-            <br />
-            You can select date and destinations... <br />
-          </i>
-        </b>
+      <div className="p-1 m-5">
+        <div id="extraInfo">
+          <h3>
+            <i>Do not hesitate to contact us</i> <br />
+            <i>if you need to help</i>
+          </h3>
+        </div>
       </div>
-      <div id="extraInfo">
-        <h3>
-          <i>Do not hesitate to contact us</i> <br />
-          <i>if you need to help</i>
-        </h3>
+      <div>
+        <Footer />
       </div>
-
-      <div id="adsPart"></div>
-
-      <form action="/makeReservation" method="post" id="reservationInfo">
-        <div id="daparture-Label">
-          <label htmlFor="departure" className="reservationLabel">
-            Departure:
-          </label>
-        </div>
-        <div id="departure-Input">
-          <input
-            type="text"
-            name="departure"
-            required
-            value={departure}
-            onChange={(event) => {
-              setDeparture(event.target.value);
-            }}
-            className="reservationInput"
-            id="departure"
-            placeholder="departure"
-          />
-        </div>
-        <div id="arriving-Label">
-          <label htmlFor="arriving" className="reservationLabel">
-            Arriving:
-          </label>
-        </div>
-
-        <div id="arriving-Input">
-          <input
-            type="text"
-            name="arriving"
-            value={arriving}
-            onChange={(event) => setArriving(event.target.value)}
-            className="reservationInput"
-            required
-            placeholder="arriving"
-          />
-        </div>
-        <div id="reservation-Date-Label">
-          <label htmlFor="date" className="reservationLabel">
-            
-            Date:
-          </label>
-        </div>
-        <div id="reservation-Date-Input">
-          <input
-            type="datetime-local"
-            name="time"
-            className="reservationInput"
-            value={time}
-            onChange={(event) => setTime(event.target.value)}
-            required
-          />
-        </div>
-
-        <div id="reservation-Button">
-          <button
-            type="submit"
-            onClick={makeReservation}
-            className="submitButtons"
-          >
-            Make Reservation
-          </button>
-        </div>
-      </form>
-
-      <div id="resultBox">
-        {total > 0 && (
-          <h2 id="result" ref={result}>
-            
-            total : {total} euro
-          </h2>
-        )}
-      </div>
-
-      <div id="mapsStyle" ref={googleMapRef} />
     </div>
   );
 }
