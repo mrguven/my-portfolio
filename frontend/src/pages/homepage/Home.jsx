@@ -9,8 +9,8 @@ import { Button } from "@mui/material";
 import Footer from "../../components/Footer";
 
 export default function Home() {
-  const ref = useRef(null);
-  const [data, setData] = useState(null);
+  // const ref = useRef(null);
+  // const [data, setData] = useState(null);
   // useEffect(() => {
   //   axios.get("http://localhost:7777/").then((res) => {
   //     setData(res.data);
@@ -119,11 +119,16 @@ export default function Home() {
               </Button>
             </span>
           </div>
-          
+
           <div className="d-flex flex-row" id="letters">
             <div className="d-flex flex-column">
-                <div className="p-1 justify-content-end" style={changeColorStyle} id="letter-I">I</div>
-             
+              <div
+                className="p-1 justify-content-end"
+                style={changeColorStyle}
+                id="letter-I"
+              >
+                I
+              </div>
             </div>
             <div className="d-flex flex-column justify-content-end">
               <div className="p-1">
@@ -148,7 +153,7 @@ export default function Home() {
                   href=""
                   className="typewrite"
                   data-period="2000"
-                  data-type='[ "I am Creative...", "I Love Design...", "I Love to Develop..." ]'
+                  data-type='[ "I am Creative...", "I Love Design...", "I Love to Develop...","React...","Angular..." ]'
                 >
                   <span className="wrap"></span>
                 </a>
