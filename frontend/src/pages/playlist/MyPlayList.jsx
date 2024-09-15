@@ -91,6 +91,7 @@ export default function MusicPlayerSlider() {
   const mainIconColor = theme.palette.mode === "dark" ? "#fff" : "#000";
   const lightIconColor =
     theme.palette.mode === "dark" ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.4)";
+    
   return (
     <Box sx={{ width: "100%", overflow: "hidden" }}>
       <Widget>

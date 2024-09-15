@@ -54,7 +54,7 @@ export default function NavBar() {
               }}
             >
               <MenuItem onClick={handleClose1}>
-              <Link className="active" to="/mytaxi">MyBinek</Link>
+              <Link className="active" to="/mybinek">MyBinek</Link>
               </MenuItem>
               <MenuItem  onClick={handleClose1}>
               <Link className="active" to="/myplaylist">MyPlay</Link>
