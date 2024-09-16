@@ -120,7 +120,7 @@ export default function Todo() {
         {todoList &&
           todoList.map((task, index) => {
             return (
-              <div id="toDoList" key={index}>
+              <div className="toDoList" key={index}>
                 <div className="taskList">
                   <ul className="sublist">
                     <li className="titleL2">

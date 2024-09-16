@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import NavBar from "./components/NavBar";
-import CatchMe from "./pages/CatchMe";
+import CatchMe from "./pages/catchMe/CatchMe";
 import Todo from "./pages/todopage/Todo";
 import MyTaxi from "./pages/myTaxi/MyTaxi";
 import About from "./pages/about/About";

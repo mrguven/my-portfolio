@@ -1,0 +1,52 @@
+#border {
+  border: 2px rgb(86, 28, 245);
+  height: 400px;
+  border-style: ridge;
+}
+
+#startButton {
+  max-width: 20%;
+  margin-left: 40%;
+  height: 50px;
+  border-radius: 20px;
+  background-color: rgb(60, 89, 255);
+  border-color: #537ff7;
+  color: white;
+}
+
+#startButton:hover {
+  background-color: rgb(209, 209, 253);
+  color: #111;
+}
+
+#pauseButtonStyle {
+  max-width: 20%;
+  margin-left: 40%;
+  height: 50px;
+  border-radius: 20px;
+  background-color: chocolate;
+  border-color: #c85000;
+}
+
+#pauseButtonStyle:hover {
+  background-color: rgb(134, 134, 243);
+}
+
+.scoreInfo {
+  font-family: Courier;
+  color: darkblue;
+  font-size: 2vw;
+}
+
+#title {
+  text-align: center;
+  font-size: 3vw;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-shadow: 1px 5px 5px #066aee;
+  color: #82b3f3;
+}
+
+#heartStyle {
+  max-width: 175px;
+  height: 175px;
+}

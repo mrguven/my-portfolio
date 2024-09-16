@@ -251,7 +251,6 @@ export default function MyTaxi() {
                   </div>
                   <div className="p-1">
                     <h5 className="text-warning">
-                      {" "}
                       &#9734; &#9734; &#9734; &#9734;
                     </h5>
                   </div>
