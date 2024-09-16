@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import heart from "./x.png";
 import "./catchMe.css";
+import Footer from "../../components/Footer";
 export default function CatchMe() {
   const [start, setStart] = useState(false);
   const [con, setCon] = useState(3);
@@ -145,6 +146,7 @@ export default function CatchMe() {
           <img id="heartStyle" src={pic} ref={displayHeart} onClick={change} />
         
       </div>
+      <Footer />
     </div>
   );
 }
