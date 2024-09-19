@@ -8,7 +8,7 @@ export default function CatchMe() {
   const [pause, setPause] = useState(false);
   const [pic, setPic] = useState(heart);
   const [score, setScore] = useState(0);
-
+  const [borderweight, setBorderweight] = useState("0");
   const [bestToLocal, setBestToLocal] = useState(0);
   const [bestFromLocal, setBestFromLocal] = useState(0);
   const [interval1, setInterval1] = useState(null);
@@ -21,13 +21,13 @@ export default function CatchMe() {
 
   const startGame = () => {
     setStart(true);
+    setBorderweight("2px");
     if ((interval1 && interval2) === null) {
       setInterval1(
         setInterval(() => {
           setStart(false);
         }, 1000)
       );
-
       setInterval2(
         setInterval(() => {
           setStart(true);
@@ -40,11 +40,11 @@ export default function CatchMe() {
     if (start) {
       setPause(true);
       setStart(false);
-
       setScore(score + 1);
       setCon(5);
     }
   };
+
   useEffect(() => {
     let elHeight = document.getElementById("border").clientHeight;
     let elWidth = document.getElementById("border").clientWidth;
@@ -70,6 +70,7 @@ export default function CatchMe() {
       setCon(con - 1);
     } else if (con == 0) {
       alert("you have lost");
+      setBorderweight('0')
       setScore(0);
       setCon(3);
       clearInterval(interval1);
@@ -77,7 +78,6 @@ export default function CatchMe() {
       setInterval1(null);
       setInterval2(null);
       setPause(false);
-
       startButton.current.style.display = "block";
     }
 
@@ -89,7 +89,6 @@ export default function CatchMe() {
 
   const pauseGame = () => {
     setStart(true);
-
     clearInterval(interval1);
     clearInterval(interval2);
     setInterval1(null);
@@ -109,10 +108,23 @@ export default function CatchMe() {
   }, [score, bestToLocal]);
 
   bestScoreView.current = "best score:" + bestFromLocal;
-
+  const border = {
+    border: `${borderweight} rgb(86, 28, 245) ridge`,
+    height: "400px",
+    borderRadius: "30px",
+  };
+  const startButtonStyle = {
+    width: "10%",
+    margin: "10% 0 0 45%",
+    height: "50px",
+    borderRadius: "20px",
+    backgroundColor: "rgb(60, 89, 255)",
+    borderColor: "#537ff7",
+    color: "white",
+  };
   return (
     <div className="d-flex flex-column">
-      <div className="d-flex flex-row justify-content-evenly">
+      <div className="d-flex flex-row justify-content-evenly mt-5">
         <div className="d-flex flex-column align-items-center">
           <div id="scoreTable">
             <h1 id="score" className="scoreInfo" ref={scoreWiew}>
@@ -131,21 +143,25 @@ export default function CatchMe() {
         </div>
       </div>
       <div>
-        <button id="startButton" ref={startButton} onClick={startGame}>
-          Start
-        </button>
         {pause && (
           <button id="pauseButtonStyle" ref={pauseRef} onClick={pauseGame}>
             Pause
           </button>
         )}
       </div>
-
-      <div id="border" className="m-5">
-        
-          <img id="heartStyle" src={pic} ref={displayHeart} onClick={change} />
-        
+      
+      <div id="border" className="m-5 d-flex" style={border}>
+        <button id="startButton"
+          style={startButtonStyle}
+          className="aling-text-center"
+          ref={startButton}
+          onClick={startGame}
+        >
+          Start
+        </button>
+        <img id="heartStyle" src={pic} ref={displayHeart} onClick={change} />
       </div>
+
       <Footer />
     </div>
   );

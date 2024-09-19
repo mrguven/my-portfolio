@@ -107,7 +107,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/rauf-guven-a76791a6/"
                 target="https://www.linkedin.com/in/rauf-guven-a76791a6/"
               >
-                <LinkedInIcon sx={{ fontSize: 50, color: "blue" }} />
+                <LinkedInIcon sx={{ fontSize: 40, color: "blue" }} />
               </Button>
             </span>
             <span>
@@ -115,13 +115,13 @@ export default function Home() {
                 href="https://github.com/mrguven"
                 target="https://github.com/mrguven"
               >
-                <GitHubIcon sx={{ fontSize: 50, color: "black" }} />
+                <GitHubIcon sx={{ fontSize: 40, color: "black" }} />
               </Button>
             </span>
           </div>
 
           <div className="d-flex flex-row" id="letters">
-            <div className="d-flex flex-column">
+            <div className="d-flex flex-row">
               <div
                 className="p-1 justify-content-end"
                 style={changeColorStyle}
@@ -129,14 +129,16 @@ export default function Home() {
               >
                 I
               </div>
-            </div>
-            <div className="d-flex flex-column justify-content-end">
-              <div className="p-1">
+              <div className="p-1 align-self-center">
                 <p className="fs-1" style={changeColorStyle}>
                   `m
                 </p>
               </div>
+            </div>
+            <div className="d-flex flex-column justify-content-end">
+              
               <div className="p-2 ms-5">
+              
                 <span style={changeColorStyle} id="first-letter">
                   R
                 </span>
@@ -160,7 +162,7 @@ export default function Home() {
               </h1>
             </div>
           </div>
-          <div className="d-flex flex-row  justify-content-center">
+          <div className="d-flex flex-row  justify-content-center" id="download-div">
             <Button variant="contained" endIcon={<FileDownloadIcon />}>
               <Link
                 className="downloadLink"
