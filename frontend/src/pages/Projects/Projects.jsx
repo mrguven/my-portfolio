@@ -16,8 +16,8 @@ export default function Portfolio() {
         <Link className="portLinks" to="/">
           Home
         </Link>
-        <Link className="portLinks" to="/mytaxi">
-          MyTaxi
+        <Link className="portLinks" to="/mybinek">
+        myBinek
         </Link>
         <Link className="portLinks" to="/todo">
           TodoApp

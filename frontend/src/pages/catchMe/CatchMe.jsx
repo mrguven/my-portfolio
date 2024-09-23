@@ -2,11 +2,11 @@ import { useEffect, useState, useRef } from "react";
 import heart from "./x.png";
 import "./catchMe.css";
 import Footer from "../../components/Footer";
+
 export default function CatchMe() {
   const [start, setStart] = useState(false);
   const [con, setCon] = useState(3);
   const [pause, setPause] = useState(false);
-  const [pic, setPic] = useState(heart);
   const [score, setScore] = useState(0);
   const [borderweight, setBorderweight] = useState("0");
   const [bestToLocal, setBestToLocal] = useState(0);
@@ -18,6 +18,7 @@ export default function CatchMe() {
   const scoreWiew = useRef();
   const bestScoreView = useRef();
   const pauseRef = useRef();
+  const borderDiv = useRef();
 
   const startGame = () => {
     setStart(true);
@@ -41,13 +42,13 @@ export default function CatchMe() {
       setPause(true);
       setStart(false);
       setScore(score + 1);
-      setCon(5);
+      setCon(3);
     }
   };
 
   useEffect(() => {
-    let elHeight = document.getElementById("border").clientHeight;
-    let elWidth = document.getElementById("border").clientWidth;
+    let elHeight = borderDiv.current?.clientHeight;
+    let elWidth = borderDiv.current?.clientWidth;
     let posX = Math.floor(Math.random() * (elWidth - 50));
     let posY = Math.floor(Math.random() * (elHeight - 50));
 
@@ -68,9 +69,9 @@ export default function CatchMe() {
 
     if (con > 0) {
       setCon(con - 1);
-    } else if (con == 0) {
+    } else if (con === 0) {
       alert("you have lost");
-      setBorderweight('0')
+      setBorderweight("0");
       setScore(0);
       setCon(3);
       clearInterval(interval1);
@@ -79,6 +80,7 @@ export default function CatchMe() {
       setInterval2(null);
       setPause(false);
       startButton.current.style.display = "block";
+      displayHeart.current.style.display = "none";
     }
 
     if (!start) {
@@ -149,9 +151,9 @@ export default function CatchMe() {
           </button>
         )}
       </div>
-      
-      <div id="border" className="m-5 d-flex" style={border}>
-        <button id="startButton"
+
+      <div ref={borderDiv} className="m-5 d-flex" style={border}>
+        <button
           style={startButtonStyle}
           className="aling-text-center"
           ref={startButton}
@@ -159,7 +161,7 @@ export default function CatchMe() {
         >
           Start
         </button>
-        <img id="heartStyle" src={pic} ref={displayHeart} onClick={change} />
+        <img id="heartStyle" src={heart} ref={displayHeart} onClick={change} />
       </div>
 
       <Footer />

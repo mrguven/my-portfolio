@@ -34,12 +34,6 @@ export default function About() {
                 op een vrolijke en gestructureerde manier zonder aandacht te
                 verliezen voor de organisatiedoelstellingen.
               </div>
-              <div className="text-center p-2 mt-3" id="text-3">
-                Ik heb een oog voor detail waarbij ik ICT-knelpunten tijdig
-                identificeer. Dit doe ik op een vrolijke en gestructureerde
-                manier zonder aandacht te verliezen voor de
-                organisatiedoelstellingen.
-              </div>
               <div className="text-center p-2 mt-3" id="text-4">
                 Ik werk aan deze projecten: -Taxi reservering programma - Music
                 playList - To do App - Catch me Game

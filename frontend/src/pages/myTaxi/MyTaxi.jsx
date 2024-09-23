@@ -245,7 +245,7 @@ export default function MyTaxi() {
                   </div>
                   <div className="p-1">
                     <h5>
-                      Estimated Time: {showTravelHour && showTravelHour + "h"}{" "}
+                      Estimated Time:{showTravelHour && showTravelHour + "h"}{" "}
                       {showTravelMin && showTravelMin + "min"}
                     </h5>
                   </div>
