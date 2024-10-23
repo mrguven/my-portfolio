@@ -57,13 +57,13 @@ export default function NavBar() {
               <Link className="active" to="/mybinek">MyBinek</Link>
               </MenuItem>
               <MenuItem  onClick={handleClose1}>
-              <Link className="active" to="/myplaylist">MyPlay</Link>
+              <Link className="active" to="/myplaylist">M&#10084;sic</Link>
               </MenuItem>
               <MenuItem onClick={handleClose1}>
                 <Link className="active" to="/todo">Todo</Link>
                </MenuItem>
               <MenuItem onClick={handleClose1}>
-              <Link className="active" to="/catchMe">CatchMe</Link>
+              <Link className="active" to="/catchMe">Catch Me</Link>
               </MenuItem>              
             </Menu>
           </div>

@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import ok from "./ok.jpg";
 import cross from "./cross.jpg";
 import "./todopage.css";
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import DeleteIcon from '@mui/icons-material/Delete';
 export default function Todo() {
   const [todoList, setTodoList] = useState([]);
   const [todo, setTodo] = useState("");
@@ -9,6 +11,7 @@ export default function Todo() {
   const [errorMsg, setErrorMsg] = useState();
   const [doneListFromLocal, setDoneListFromLocal] = useState("");
   const [todoListFromLocal, setTodoListFromLocal] = useState("");
+  
   const [toLocalList, setToLocalList] = useState([]);
   const [toLocalDoneList, setToLocalDoneList] = useState([]);
 
@@ -120,7 +123,7 @@ export default function Todo() {
         {todoList &&
           todoList.map((task, index) => {
             return (
-              <div id="toDoList" key={index}>
+              <div className="toDoList" key={index}>
                 <div className="taskList">
                   <ul className="sublist">
                     <li className="titleL2">
@@ -129,24 +132,14 @@ export default function Todo() {
                   </ul>
                 </div>
                 <div className="OkImg">
-                  <img
-                    className="img"
-                    src={ok}
-                    alt="ok"
-                    onClick={() => {
-                      taskSucceed(index);
-                    }}
-                  />
+                  <CheckCircleOutlineIcon  onClick={() => {
+                      taskSucceed(index)}}  />
+                
                 </div>
                 <div className="deleteImg">
-                  <img
-                    className="img"
-                    src={cross}
-                    alt="cross"
-                    onClick={() => {
+                  <DeleteIcon onClick={() => {
                       taskDelete(index);
-                    }}
-                  />
+                    }} style={{color:'#808080'}}/>                  
                 </div>
               </div>
             );
@@ -159,22 +152,16 @@ export default function Todo() {
             return (
               <div id="todoDone" key={index}>
                 <div className="donetaskList">
-                  {" "}
                   <ul className="sublist">
                     <li className="titleL2">
-                      <h2 className="taskh2"> {doneTask} </h2>{" "}
+                      <h2 className="taskh2"> {doneTask} </h2>
                     </li>
                   </ul>
                 </div>
                 <div className="deleteImg">
-                  <img
-                    className="img"
-                    src={cross}
-                    alt="cross"
-                    onClick={() => {
+                <DeleteIcon  onClick={() => {
                       DonetaskDelete(index);
-                    }}
-                  />
+                    }} style={{color:'#808080'}}/>    
                 </div>
               </div>
             );

@@ -93,6 +93,9 @@ export default function MusicPlayerSlider() {
     theme.palette.mode === "dark" ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.4)";
     
   return (
+    <div className="d-flex flex-column">
+    
+    <div className="d-flex flex-column">
     <Box sx={{ width: "100%", overflow: "hidden" }}>
       <Widget>
         <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -111,10 +114,10 @@ export default function MusicPlayerSlider() {
               Jun Pulse
             </Typography>
             <Typography noWrap>
-              <b>คนเก่าเขาทำไว้ดี (Can&apos;t win)</b>
+              <b> (Can&apos;t win)</b>
             </Typography>
             <Typography noWrap letterSpacing={-0.25}>
-              Chilling Sunday &mdash; คนเก่าเขาทำไว้ดี
+              Chilling Sunday &mdash; 
             </Typography>
           </Box>
         </Box>
@@ -229,5 +232,13 @@ export default function MusicPlayerSlider() {
       </Widget>
       <WallPaper />
     </Box>
+    </div>
+    <div className="d-flex flex-column align-item-center">
+    <button class="btn btn-primary" type="button" disabled>
+  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+  <span role="status">Page Soon will be ready...</span>
+</button>
+    </div>
+    </div>
   );
 }
