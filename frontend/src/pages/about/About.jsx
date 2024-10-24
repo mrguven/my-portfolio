@@ -16,6 +16,7 @@ import Footer from "../../components/Footer";
 
 export default function About() {
   return (
+    <div>
     <div className="d-flex flex-column" id="mainContainerAbout">
       <div className="d-flex flex-column m-3 mt-5">
         <div className="d-flex mb-3 flex-column justify-content-center">
@@ -253,6 +254,7 @@ export default function About() {
             </div>
           </div>
         </div>
+      </div>
       </div>
       <Footer />
     </div>

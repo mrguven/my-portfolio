@@ -11,5 +11,8 @@
     right: 0;
     opacity: 0.4;
     background-size: cover;
-    height: 140vh;
+    height: 1150px;
+  }
+  #mainContainer-contact{
+    height: 1000px;
   }

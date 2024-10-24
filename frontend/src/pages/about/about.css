@@ -11,10 +11,11 @@
   right: 0;
   opacity: 0.4;
   background-size: cover;
-  height: 2100px;
+  height: 2300px;
 }
 #mainContainerAbout {
   font-weight: bolder;
+  height: 2150px;
 }
 #profile-image {
   z-index: -3;

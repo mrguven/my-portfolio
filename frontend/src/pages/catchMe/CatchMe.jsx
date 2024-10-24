@@ -115,15 +115,6 @@ export default function CatchMe() {
     height: "400px",
     borderRadius: "30px",
   };
-  const startButtonStyle = {
-    width: "10%",
-    margin: "10% 0 0 45%",
-    height: "50px",
-    borderRadius: "20px",
-    backgroundColor: "rgb(60, 89, 255)",
-    borderColor: "#537ff7",
-    color: "white",
-  };
   return (
     <div className="d-flex flex-column">
       <div className="d-flex flex-row justify-content-evenly mt-5">
@@ -139,7 +130,6 @@ export default function CatchMe() {
             )}
           </div>
         </div>
-
         <div className="p-2">
           <h1 id="title">Catch Me</h1>
         </div>
@@ -151,10 +141,9 @@ export default function CatchMe() {
           </button>
         )}
       </div>
-
       <div ref={borderDiv} className="m-5 d-flex" style={border}>
         <button
-          style={startButtonStyle}
+        id="startButton"
           className="aling-text-center"
           ref={startButton}
           onClick={startGame}
@@ -163,7 +152,6 @@ export default function CatchMe() {
         </button>
         <img id="heartStyle" src={heart} ref={displayHeart} onClick={change} />
       </div>
-
       <Footer />
     </div>
   );

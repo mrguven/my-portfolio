@@ -8,6 +8,7 @@ export default function Contact() {
 
 
   return (
+    <div>
     <div className="d-flex flex-column align-items-center" id="mainContainer-contact" >
       <div className="d-flex flex-row justify-content-center border-bottom border-primary w-100 my-5 pb-5">
         <div className="card m-2 align-items-center" style={{ width: "18rem" }}>
@@ -50,7 +51,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-
       <div className="d-flex flex-column align-items-center col-7">
         <form>
           <div className="mb-3">
@@ -88,7 +88,9 @@ export default function Contact() {
           </button>
         </form>
       </div>
+      </div>
       <Footer />
+    
     </div>
   );
 }

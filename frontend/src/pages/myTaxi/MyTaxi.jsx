@@ -282,9 +282,7 @@ export default function MyTaxi() {
           </h4>
         </div>
       </div>
-      <div>
         <Footer />
-      </div>
     </div>
   );
 }

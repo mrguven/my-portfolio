@@ -98,6 +98,7 @@ export default function Home() {
   };
 
   return (
+    <div className="col-sm-12">
     <div className="d-flex flex-column" id="mainContainerHome">
       <div className="d-flex flex-column" id="box">
         <div className="d-flex flex-column">
@@ -176,7 +177,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+      </div>
       <Footer />
+    
     </div>
   );
 }
